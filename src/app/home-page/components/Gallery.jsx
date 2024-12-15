@@ -3,9 +3,11 @@ import React from 'react'
 const Gallery = () => {
   return (
     <div className='flex flex-col md:h-auto bg-[#DED0C5]'>
-      <div className="section-1 ml-8 mt-14 mb-8">
+      <div className="section-1 ml-8 mt-32 md:mt-14 mb-8">
         <img src="/img/Gallery/GALLERY.png" alt="" />
-        <p></p>
+        <p className="text-[#796355] text-lg md:text-start text-center leading-relaxed mb-8 md:w-[60%]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
       </div>
 
       <div className="section-2 flex flex-col md:flex-row justify-center gap-5 mb-6">
