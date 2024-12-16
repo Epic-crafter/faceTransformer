@@ -1,10 +1,11 @@
 import React from 'react'
-import Gallery from './component/Gallery';
+import Gallery from './home-page/components/ContactUs';
+import Pages from './home-page/pages';
 
 const page = () => {
   return (
     <>
-      <Gallery />
+      <Pages />
     </>
   )
 }
