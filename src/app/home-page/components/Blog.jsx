@@ -3,7 +3,7 @@ import React from 'react'
 const Blog = () => {
   return (
     <div className='flex flex-col md:h-auto bg-[#DED0C5]'>
-        <div className="section-1 ml-20 my-20">
+        <div className="section-1 md:ml-20 flex md:justify-start justify-center my-20">
             <img src="/img/Blog/BLOG.png" alt="" />
         </div>
 

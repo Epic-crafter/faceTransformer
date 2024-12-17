@@ -3,7 +3,7 @@ import React from 'react'
 const Services = () => {
   return (
     <div className="flex flex-col bg-[#DED0C5] gap-20">
-        <div className="section-1 ml-8 mt-16">
+        <div className="section-1 flex md:justify-start justify-center px-4 md:ml-8 mt-16">
             <img src="/img/Services/SERVICES.png" alt="" />
         </div>
 
