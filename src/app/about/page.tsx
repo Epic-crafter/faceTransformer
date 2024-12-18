@@ -28,60 +28,94 @@ const Page = () => {
           <img src="/img/AboutUs/qualification.png" className='pb-3 px-8' alt="" />
           <div className="qualiication-text flex flex-col px-8 text-[#372E27] font-bold gap-6">
             <div className="qualification-text-1 flex justify-between">
-              <div className="text-1 w-[90%] text-start">BDS - Bachelor of Dental Surgery</div>
-              <div className="text-2 w-[10%] text-center">2012</div>
+              <div className="text-1 w-[50%] md:md:w-[90%] flex flex-col justify-center items-start text-start">
+                <p>BDS - Bachelor of Dental Surgery</p>
+                <p>2012</p>
+                </div>
+              <div className="text-2 w-[50%] md:md:w-[10%] text-center">
+                <img src="/img/AboutRoute/img-1.jpg" alt="" />
+              </div>
             </div>
 
             <div className="qualification-text-2 flex justify-between">
-              <div className="text-1 w-[90%] text-start">Fellow of Academy of General Education (FAGE) MDS - Masters of Dental Surgery in Oral & Maxillofacial Surgery. (Topper in Branch)</div>
-              <div className="text-2 w-[10%] text-center">2016</div>
+              <div className="text-1 md:w-[10%] w-[50%] text-start">
+              <img src="/img/AboutRoute/img-2.jpg" alt="" />
+              </div>
+              <div className="text-2 md:w-[90%] w-[50%] text-end flex flex-col items-end justify-center">
+                <div>Fellow of Academy of General Education (FAGE) MDS - Masters of Dental Surgery in Oral & Maxillofacial Surgery. (Topper in Branch)</div>
+                <p>2016</p>
+                </div>
             </div>
 
             <div className="qualification-text-3 flex justify-between">
-            <div className="text-1 w-[90%] text-start">
-                <p>Fellowship in Aesthetic Medicine (FAM) </p>
+              <div className="text-1 md:w-[90%] w-[50%] flex flex-col justify-center items-start text-start">
+              <p>Fellowship in Aesthetic Medicine (FAM) </p>
               <p>University of Greifswald, Germany</p>
+              <p>2017</p>
+                </div>
+              <div className="text-2 md:w-[10%] w-[50%] text-center">
+                <img src="/img/AboutRoute/img-3.jpg" alt="" />
               </div>
-              <div className="text-2 w-[10%] text-center">2017</div>
             </div>
 
-            <div className="qualification-text-2 flex justify-between">
-              <div className="text-1 w-[90%] text-start">
-                <p>Practical training for non-surgical aesthetic medicine under Dr. Jamuna Pai (Celebrity cosmetologist)</p>
+            <div className="qualification-text-4 flex justify-between">
+              <div className="text-1 md:w-[10%] w-[50%] text-start">
+              <img src="/img/AboutRoute/img-4.jpg" alt="" />
+              </div>
+              <div className="text-2 md:w-[90%] w-[50%] text-end flex flex-col items-end justify-center">
+              <p>Practical training for non-surgical aesthetic medicine under Dr. Jamuna Pai (Celebrity cosmetologist)</p>
                 <p>Diplomate of Aesthetic LASER Medicine (DALM) University of Greifswald, Germany</p>
-              </div>
-              <div className="text-2 w-[10%] text-center">2018</div>
+                <p>2018</p>
+                </div>
             </div>
 
-            <div className="qualification-text-2 flex justify-between">
-              <div className="text-1 w-[90%] text-start">
-                <p>Fellowship with International Academy of Aesthetic Training. Sweden (FIAAT)</p>
+            <div className="qualification-text-5 flex justify-between">
+              <div className="text-1 md:w-[90%] w-[50%] flex flex-col justify-center items-start text-start">
+              <p>Fellowship with International Academy of Aesthetic Training. Sweden (FIAAT)</p>
                 <p>Medical micro-pigmentation Hands on Training.</p>
+                <p>2020</p>
+                </div>
+              <div className="text-2 md:w-[10%] w-[50%] text-center">
+                <img src="/img/AboutRoute/img-5.jpg" alt="" />
               </div>
-              <div className="text-2 w-[10%] text-center">2020</div>
             </div>
 
-            <div className="qualification-text-2 flex justify-between">
-              <div className="text-1 w-[90%] text-start">Zygomatic implants-Rehabilitation for atrophic maxilla hands on workshop</div>
-              <div className="text-2 w-[10%] text-center">2021</div>
+            <div className="qualification-text-6 flex justify-between">
+              <div className="text-1 md:w-[10%] w-[50%] text-start">
+              <img src="/img/AboutRoute/img-6.jpg" alt="" />
+              </div>
+              <div className="text-2 md:w-[90%] w-[50%] text-end flex flex-col items-end justify-center">
+                <div>Zygomatic implants-Rehabilitation for atrophic maxilla hands on workshop</div>
+                <p>2021</p>
+                </div>
             </div>
 
-            <div className="qualification-text-2 flex justify-between">
-              <div className="text-1 w-[90%] text-start">Bombay - Hair Transplant, Hands on workshop</div>
-              <div className="text-2 w-[10%] text-center">2022</div>
+            <div className="qualification-text-7 flex justify-between">
+              <div className="text-1 md:w-[90%] w-[50%] flex flex-col justify-center items-start text-start">
+                <p>Bombay - Hair Transplant, Hands on workshop</p>
+                <p>2022</p>
+                </div>
+              <div className="text-2 md:w-[10%] w-[50%] text-center">
+                <img src="/img/AboutRoute/img-7.jpg" alt="" />
+              </div>
             </div>
 
-            <div className="qualification-text-2 flex justify-between">
-              <div className="text-1 w-[90%] text-start">
+            <div className="qualification-text-8 flex justify-between">
+              <div className="text-1 md:w-[10%] w-[50%] text-start">
+              <img src="/img/AboutRoute/img-8.jpg" alt="" />
+              </div>
+              <div className="text-2 md:w-[90%] w-[50%] text-end flex flex-col items-end justify-center">
+                <div>
                 <p>Sao Paulo, Brazil </p>
-                <p>Facial Plastic Surgery Cadeveric Lab workshop</p>
-              </div>
-              <div className="text-2 w-[10%] text-center">2022</div>
+                <p>Facial Plastic Surgery Cadeveric Lab workshop</p></div>
+                <p>2022</p>
+                </div>
             </div>
+
           </div>
           </div>
 
-          <div className="contact-section flex flex-col">
+          <div className="contact-section mt-10 flex flex-col">
           <img src="/img/AboutUs/contact us (1).png" className='w-[250px] h-[30px] mx-8 mt-5' alt="" />
           <div className="contact-us">
             <div className='flex gap-3 items-center text-[#372E27] font-bold px-8 py-3'>
