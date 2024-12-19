@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { Card } from "@/components/ui/card"
-import Navbar from "../home-page/components/Navbar"
 
 export default function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -31,7 +30,6 @@ export default function Services() {
 
   return (
     <div>
-        <Navbar/>
 
     <div className="min-h-screen bg-[rgb(222,208,197)] p-8 pb-2">
       <div className="max-w-7xl mx-auto mt-[39px]">
