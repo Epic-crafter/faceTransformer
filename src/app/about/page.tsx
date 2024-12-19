@@ -24,7 +24,7 @@ const Page = () => {
 
 
         <div className="section-2">
-          <div className="qualification">
+          <div className="qualification text-[12px] lg:text-sm lg:w-[80%] mx-auto ">
           <img src="/img/AboutUs/qualification.png" className='pb-3 px-8' alt="" />
           <div className="qualiication-text flex flex-col px-8 text-[#372E27] font-bold gap-6">
             <div className="qualification-text-1 flex justify-between">
