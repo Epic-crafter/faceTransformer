@@ -37,7 +37,7 @@ const Home = () => {
         <p className="text-[#796355] text-lg leading-relaxed mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <div className="img-section flex flex-wrap gap-5">
+        <div className="img-section flex flex-wrap gap-5 justify-center">
           <div onClick={() => handleBothImages("/img/Home-page/hero-section-2-strip-img/enhance.png", "/img/Home-page/hero-menu-img/GAL1.png")}>
             <img
               onClick={() => handleText("/img/Home-page/hero-section-2-strip-img/enhance.png")}
@@ -86,13 +86,13 @@ const Home = () => {
       </div>
 
       <div className="hero-section-2 w-full md:w-[40%] flex justify-center bg-[url('/img/imgggg 1.png')]">
-        <div className="w-[50vw] h-[500px] md:h-[720px] relative bg-cover">
+        <div className="w-[100vw] h-[500px] md:h-[720px] flex justify-center relative bg-cover mt-8 md:mt-0">
           <div
             className={`z-20 absolute top-0 left-0 object-cover transition-transform duration-500 ${
               isSliding ? "translate-x-full" : "translate-x-0"
             }`}
           >
-            <img className="h-[700px]" src={currentText} />
+            <img className="md:h-[700px] h-[500px]" src={currentText} />
           </div>
           <div
             className={`absolute top-0 left-0 h-full w-full object-cover transition-transform duration-500 ${

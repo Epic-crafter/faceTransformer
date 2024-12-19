@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='flex md:flex-row flex-col md:h-auto bg-[#DED0C5]'>
-      <div className="section-1 pt-20 pb-6 ml-8 mt-6 w-auto md:w-[50%]">
+      <div className="section-1 pt-20 pb-6 md:ml-8 mt-6 w-auto md:w-[50%]">
         <div className='text-img ml-4 py-6'>
         <img src="/img/AboutUs/about us.png" alt="" />
         </div>
