@@ -34,7 +34,7 @@ const Home = () => {
     <div className="flex flex-wrap bg-[#DED0C5] pb-6 relative md:pt-0 pt-16">
       <div className="hero-section-1 w-full md:w-[60%] mt-[100px] z-20 px-6 md:px-12">
         <img src="/img/Home-page/BEYOND BEAUTY.png" alt="Beyond Beauty" className="mb-6" />
-        <p className="text-[#796355] text-lg leading-relaxed mb-8">
+        <p className="text-[#796355] text-[16px] font-medium leading-relaxed mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="img-section flex flex-wrap gap-5 justify-center">

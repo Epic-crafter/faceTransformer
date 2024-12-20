@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={`nav-items font-semibold flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center md:static absolute w-full md:w-auto top-16 md:top-auto left-0 md:left-auto md:mr-56 bg-[#DED0C5] md:bg-transparent transition-all duration-300 ${
+        className={`nav-items font-bold text-[14px] flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center md:static absolute w-full md:w-auto top-16 md:top-auto left-0 md:left-auto md:mr-56 bg-[#DED0C5] md:bg-transparent transition-all duration-300 ${
           isClick ? "block" : "hidden md:flex"
         }`}
       >

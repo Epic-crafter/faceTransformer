@@ -19,7 +19,7 @@ const Footer = () => {
 
       <div className="section-2 flex flex-col items-start gap-4 text-white font-semibold md:w-[20%]">
         <h2 className="text-lg md:text-xl">Quick Links</h2>
-        <div className="links flex flex-col gap-3 text-md">
+        <div className="links flex flex-col gap-3 text-[16px] font-medium">
           <a href="/aboutus" className="hover:text-[#D6AF96]">About Us</a>
           <a href="/service" className="hover:text-[#D6AF96]">Service</a>
           <a href="/pricing" className="hover:text-[#D6AF96]">Pricing</a>
@@ -29,7 +29,7 @@ const Footer = () => {
 
       <div className="section-3 text-white font-semibold md:w-[25%]">
         <h2 className="text-lg md:text-xl">Contact Us</h2>
-        <div className="info-container flex flex-col gap-4 mt-4">
+        <div className="info-container flex flex-col gap-4 mt-4 text-[16px] font-medium">
           <div className="info-1 flex items-center">
             <img src="/img/Footer/Vector.png" alt="Icon" className="w-4 h-4" />
             <p className="ml-2 text-md">hello@website.com</p>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="section-4 text-white font-semibold md:w-[25%]">
+      <div className="section-4 text-white font-semibold md:w-[25%] sm:mt-4">
         <h1 className="text-lg md:text-xl">Newsletter</h1>
         <div className="flex mt-4">
           <input 
