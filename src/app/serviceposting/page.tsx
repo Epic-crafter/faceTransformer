@@ -8,6 +8,7 @@ export default function PostServicePage() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [imageFile, setImageFile] = useState<File | null>(null)
+  const [imagePreview, setImagePreview] = useState<string | null>(null)  // New state for image preview
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,7 +27,13 @@ export default function PostServicePage() {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setImageFile(e.target.files[0])
+      const file = e.target.files[0]
+      setImageFile(file)
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)  // Set the preview URL
+      }
+      reader.readAsDataURL(file)
     }
   }
 
@@ -92,6 +99,16 @@ export default function PostServicePage() {
                   />
                 </div>
               </div>
+
+              {/* Display image preview or default text */}
+              <div className="mt-4">
+                {imagePreview ? (
+                  <img src={imagePreview} alt="Image Preview" className="w-full h-56 object-cover rounded-md" />
+                ) : (
+                  <p className="text-center text-gray-500">No image selected</p>
+                )}
+              </div>
+
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white p-3 rounded-md shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
