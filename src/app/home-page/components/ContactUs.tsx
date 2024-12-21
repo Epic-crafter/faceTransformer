@@ -7,9 +7,9 @@ const Gallery = () => {
             <img src="/img/ContactUs/contact us.png" alt="" />
         </div>
 
-        <div className="section-2 bg-[#D6AF96] md:gap-0 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] gap-5 mx-10 my-10 rounded-[10px] border-none flex md:flex-row flex-col justify-between px-12 py-8">
-                <div className="form-section-1 md:w-[644px] w-auto font-medium">
-                    <img src="/img/ContactUs/Fill up this form to get a free consultation.png" alt="" />
+        <div className="section-2 bg-[#D6AF96] md:gap-0 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] gap-5 mx-10 my-10 rounded-[10px] border-none flex md:flex-row flex-col justify-between px-6 md:px-12 py-8">
+                <div className="form-section-1 md:w-[644px] w-auto text-[20px] font-normal">
+                    <img src="/img/ContactUs/Fill up this form to get a free consultation.png" className='h-16' alt="" />
                     <p>Dont forget to check out our socials!! They will be linked right </p>
                     <p>here for yall to get an idea about us!! </p>
                     <p>Go show us some love!</p>

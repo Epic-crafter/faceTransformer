@@ -7,9 +7,9 @@ const Gallery = () => {
         <img
           src="/img/Gallery/GALLERY.png"
           alt=""
-          className="mx-auto sm:mx-0 w-[80%] sm:w-auto"
+          className="mx-auto sm:mx-0 w-[80%] sm:w-auto mb-4"
         />
-        <p className="text-[#796355] text-base sm:text-lg text-center sm:text-start leading-relaxed mb-8 sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
+        <p className="text-[#796355] text-base text-[16px] font-medium text-center sm:text-start leading-relaxed mb-8 sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
@@ -26,7 +26,7 @@ const Gallery = () => {
             src="/img/Gallery/fram-img/IMG_5255 1.png"
             alt=""
           />
-          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
+          <div className="container-text py-3 px-6 border rounded-[10px] text-[14px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
             <p>
               Captivating art made every wall its canvas. The old paint chipped
               off of the sturdy bricks that kept the city together.
@@ -35,7 +35,7 @@ const Gallery = () => {
         </div>
         
         <div className="flex flex-col md:w-[20%] px-6 sm:px-8 py-6 md:px-0 md:py-0 gap-6 relative">
-          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
+          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold text-[14px] bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
             <p>
               The murals gave the city walls meaning as they grew like a
               protective barrier over the heart.
@@ -51,7 +51,7 @@ const Gallery = () => {
             src="/img/Gallery/fram-img/IMG_5258 1.png"
             alt=""
           />
-          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
+          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold text-[14px] bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
             <p>
               The boulevard brought all different types of people together. A
               blend of cultures created a community of diverse beliefs,
@@ -73,7 +73,7 @@ const Gallery = () => {
             src="/img/Gallery/fram-img/IMG_5302 1.png"
             alt=""
           />
-          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
+          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold text-[14px] bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
             <p>
               People rushed past my side without a second glance. A place full
               of people can be the most isolating.
@@ -82,7 +82,7 @@ const Gallery = () => {
         </div>
 
         <div className="flex flex-col md:w-[20%] px-6 sm:px-8 py-6 md:px-0 md:py-0 gap-6 relative">
-          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
+          <div className="container-text py-3 px-6 border rounded-[10px] font-semibold text-[14px] bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
             <p>
               People rushed past my side without a second glance. A place full
               of people can be the most isolating.
