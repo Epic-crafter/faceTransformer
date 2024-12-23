@@ -37,13 +37,10 @@ export default function GalleryCarousel() {
     <div className=" bg-[rgb(222,208,197)] pt-[7rem] px-8">
       <div className="container mx-auto max-w-6xl">
        
-        <div className="mb-8">
-          <img
-            src="./img/Gallery/GALLERY.png"
-            alt="GALLERY"
-            className="w-full max-w-md h-auto"
-          />
-        </div>
+      <h1 className="mb-8 sm:mb-12 w-full max-w-md mx-auto text-center text-white text-[clamp(2rem,5vw,4rem)] font-[651] uppercase leading-[1.2] tracking-[0%] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-bigerside ml-[-39px] sm:ml-[-38px]">
+  Gallery
+</h1>
+
         
        
         <p className="text-[#766B63] text-left max-w-3xl mb-16 text-lg">
