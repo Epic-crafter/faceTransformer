@@ -4,17 +4,20 @@ const Page = () => {
   return (
        <div className='bg-[#DED0C5] flex flex-col'>
           <div className="sectoion-1 flex md:flex-row flex-col">
-            <div className="container-section-1 md:w-[70%] flex flex-col p-14">
-          <img src="/img/AboutUs/about us.png" className='md:w-[669px] md:h-[96px] mb-14 mt-5' alt="" />
+            <div className="container-section-1 md:w-[70%] flex flex-col md:p-14 p-8">
+            <h1
+  className="font-bigerside-expanded uppercase font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
+>
+About Us
+</h1>
           <div className='img-about'>
-          <img src="/img/AboutUs/meet the doctor.png" alt="" />
-          <img src="/img/AboutUs/dR. priyanka rana.png" className=' pb-3' alt="" />
-          <img src="/img/AboutUs/Consultant Maxillofacial & Facial Plastic Surgeon.png" className='pb-3' alt="" />
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#796355] text-start text-[38px] md:text-[35px]">meet the doctor</h1>
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#372E27] text-start text-[34px] md:text-[55px]">dR. priyanka rana</h1>
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[100%] text-[#372E27] text-start text-[34px] md:text-[20px]">Consultant Maxillofacial & Facial Plastic Surgeon</h1>
           </div>
   
-          <div className="about-text flex flex-col gap-4 md:text-start text-center">
-              <p className="text-[#796355] text-lg">Dynamic Maxillofacial Surgeon with extra qualifications and interest in Facial Plastic surgery with more than 8 years of experience. Strongly focused on listening to and addressing patients&apos; concerns along with providing best possible outcome surgically or non surgically.</p>
-              <p className="text-[#796355] text-lg">My expertise includes managing complex maxillofacial trauma cases, and I pride myself on my result-oriented approach and positive attitude. This focus allows me to achieve optimal results and ensure patient satisfaction, fostering happy and content patients.</p>
+          <div className="about-text flex flex-col gap-4 md:text-start text-center text-[20px] font-medium">
+              <p className="text-[#796355]">Dynamic Maxillofacial Surgeon with extra qualifications and interest in Facial Plastic surgery with more than 8 years of experience. Strongly focused on listening to and addressing patients' concerns along with providing best possible outcome surgically or non surgically.</p>
           </div>  
           </div>
           <div className="container-section-2 flex justify-center items-center p-8">
@@ -24,9 +27,9 @@ const Page = () => {
 
 
         <div className="section-2">
-          <div className="qualification text-[12px] lg:text-sm lg:w-[80%] mx-auto ">
-          <img src="/img/AboutUs/qualification.png" className='pb-3 px-8' alt="" />
-          <div className="qualiication-text flex flex-col px-8 text-[#372E27] font-bold gap-6">
+          <div className="qualification mt-20">
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#796355] text-start text-[20px] sm:text-[34px] md:text-[35px] px-8">qualification</h1>
+          <div className="qualiication-text text-[24px] font-semibold flex flex-col px-8 text-[#372E27] gap-6">
             <div className="qualification-text-1 flex justify-between">
               <div className="text-1 w-[50%] md:md:w-[90%] flex flex-col justify-center items-start text-start">
                 <p>BDS - Bachelor of Dental Surgery</p>
@@ -116,8 +119,8 @@ const Page = () => {
           </div>
 
           <div className="contact-section mt-10 flex flex-col">
-          <img src="/img/AboutUs/contact us (1).png" className='w-[250px] h-[30px] mx-8 mt-5' alt="" />
-          <div className="contact-us">
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#796355] text-start text-[20px] sm:text-[34px] md:text-[35px] px-8">contact us</h1>
+          <div className="contact-us md:text-[24px] text-[20px] max-[366px]:text-[17px] font-semibold">
             <div className='flex gap-3 items-center text-[#372E27] font-bold px-8 py-3'>
               <img src="/img/AboutUs/el_phone-alt.png" alt="" className='h-8 w-8' />
               <p>+91 8780687611</p>
@@ -126,7 +129,7 @@ const Page = () => {
               <img src="/img/AboutUs/lets-icons_message-fill.png" className='h-8 w-8' alt="" />
               <p>priyankamaxfax@gmail.com</p>
             </div>
-            <div className='flex gap-3 items-center text-[#372E27] font-bold px-8 py-3'>
+            <div className='flex gap-3 items-center w-[90%] text-[#372E27] font-bold px-5 md:px-8 py-3'>
               <img src="/img/AboutUs/dashicons_admin-site-alt3.png" className='h-8 w-8' alt="" />
               <p>http://www.drpriyankarana.com/</p>
             </div>
