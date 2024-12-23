@@ -3,14 +3,18 @@ import React from 'react'
 const Blog = () => {
   return (
     <div className='flex flex-col md:h-auto bg-[#DED0C5]'>
-        <div className="section-1 md:ml-20 flex md:justify-start justify-center my-20">
-            <img src="/img/Blog/BLOG.png" alt="" />
+        <div className="section-1 md:ml-20 flex md:justify-start justify-center mt-12">
+        <h1
+  className="font-bigerside-expanded uppercase font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
+>
+Blog
+</h1>
         </div>
 
-        <div className="section-2 gap-5 flex flex-col md:flex-row ml-4 mb-8">
-            <div className='container-1 flex flex-col bg-[#F1EFEE] p-4'>
+        <div className="section-2 gap-3 flex flex-col md:flex-row ml-4 mb-16">
+            <div className='container-1 flex flex-col bg-[#F1EFEE] p-4 mr-4 md:mr-0'>
             <img src="/img/Blog/Image.png" alt="" />
-            <img className='mb-4 mt-6' src="/img/Blog/Subheading.png" alt="" />
+            <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-center text-[20px] sm:text-[34px] md:text-[30px]">Cheek Transform</h1>
             <p className='font-medium text-[16px]'>Linear helps streamline software projects, sprints, tasks, and bug trackLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
             <div className="user-info flex flex-row gap-2 p-2">
             <img src="/img/Blog/Avatar.png" alt="" />
@@ -21,9 +25,9 @@ const Blog = () => {
             </div>
             </div>
 
-            <div className='container-2 flex flex-col bg-[#F1EFEE] p-4'>
+            <div className='container-2 flex flex-col bg-[#F1EFEE] p-4 mr-4 md:mr-0'>
             <img src="/img/Blog/Image.png" alt="" />
-            <img className='mb-4 mt-6' src="/img/Blog/Subheading.png" alt="" />
+            <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-center text-[20px] sm:text-[34px] md:text-[30px]">Cheek Transform</h1>
             <p className='font-medium text-[16px]'>Linear helps streamline software projects, sprints, tasks, and bug trackLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
             <div className="user-info flex flex-row gap-2 p-2">
             <img src="/img/Blog/Avatar.png" alt="" />
@@ -34,9 +38,9 @@ const Blog = () => {
             </div>
             </div>
 
-            <div className='container-3 flex flex-col bg-[#F1EFEE] p-4'>
+            <div className='container-3 flex flex-col bg-[#F1EFEE] p-4 mr-4 md:mr-0'>
             <img src="/img/Blog/Image.png" alt="" />
-            <img className='mb-4 mt-6 w-full' src="/img/Blog/Subheading.png" alt="" />
+            <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-center text-[20px] sm:text-[34px] md:text-[30px]">Cheek Transform</h1>
             <p className='font-medium text-[16px]'>Linear helps streamline software projects, sprints, tasks, and bug trackLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
             <div className="user-info flex flex-row gap-2 p-2">
             <img src="/img/Blog/Avatar.png" alt="" />

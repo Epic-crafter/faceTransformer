@@ -5,11 +5,15 @@ const Page = () => {
        <div className='bg-[#DED0C5] flex flex-col'>
           <div className="sectoion-1 flex md:flex-row flex-col">
             <div className="container-section-1 md:w-[70%] flex flex-col md:p-14 p-8">
-          <img src="/img/AboutUs/about us.png" className='md:w-[669px] md:h-[96px] mb-14 mt-5' alt="" />
+            <h1
+  className="font-bigerside-expanded uppercase font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
+>
+About Us
+</h1>
           <div className='img-about'>
-          <img src="/img/AboutUs/meet the doctor.png" alt="" />
-          <img src="/img/AboutUs/dR. priyanka rana.png" className=' pb-3' alt="" />
-          <img src="/img/AboutUs/Consultant Maxillofacial & Facial Plastic Surgeon.png" className='pb-3 h-10 md:h-auto' alt="" />
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#796355] text-start text-[38px] md:text-[35px]">meet the doctor</h1>
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#372E27] text-start text-[34px] md:text-[55px]">dR. priyanka rana</h1>
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[100%] text-[#372E27] text-start text-[34px] md:text-[20px]">Consultant Maxillofacial & Facial Plastic Surgeon</h1>
           </div>
   
           <div className="about-text flex flex-col gap-4 md:text-start text-center text-[20px] font-medium">
@@ -24,7 +28,7 @@ const Page = () => {
 
         <div className="section-2">
           <div className="qualification mt-20">
-          <img src="/img/AboutUs/qualification.png" className='pb-3 px-8' alt="" />
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#796355] text-start text-[20px] sm:text-[34px] md:text-[35px] px-8">qualification</h1>
           <div className="qualiication-text text-[24px] font-semibold flex flex-col px-8 text-[#372E27] gap-6">
             <div className="qualification-text-1 flex justify-between">
               <div className="text-1 w-[50%] md:md:w-[90%] flex flex-col justify-center items-start text-start">
@@ -115,8 +119,8 @@ const Page = () => {
           </div>
 
           <div className="contact-section mt-10 flex flex-col">
-          <img src="/img/AboutUs/contact us (1).png" className='w-[250px] h-[30px] mx-8 mt-5' alt="" />
-          <div className="contact-us text-[24px] font-semibold">
+          <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-[#796355] text-start text-[20px] sm:text-[34px] md:text-[35px] px-8">contact us</h1>
+          <div className="contact-us md:text-[24px] text-[20px] max-[366px]:text-[17px] font-semibold">
             <div className='flex gap-3 items-center text-[#372E27] font-bold px-8 py-3'>
               <img src="/img/AboutUs/el_phone-alt.png" alt="" className='h-8 w-8' />
               <p>+91 8780687611</p>
