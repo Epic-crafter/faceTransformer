@@ -4,11 +4,13 @@ const Gallery = () => {
   return (
     <div className="flex flex-col md:h-auto bg-[#DED0C5]">
       <div className="section-1 ml-4 sm:ml-8 mt-20 sm:mt-32 md:mt-14 mb-8">
-        <img
-          src="/img/Gallery/GALLERY.png"
-          alt=""
-          className="mx-auto sm:mx-0 w-[80%] sm:w-[30vw] mb-4"
-        />
+      <h1
+  class="font-bigerside-expanded font-[800] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-center md:text-start mb-10"
+>
+GALLERY
+</h1>
+      
+
         <p className="text-[#796355] text-base text-[16px] font-medium text-center sm:text-start leading-relaxed mb-8 sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>

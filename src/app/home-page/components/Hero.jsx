@@ -33,7 +33,18 @@ const Home = () => {
   return (
     <div className="flex flex-wrap bg-[#DED0C5] pb-6 relative md:pt-0 pt-16">
       <div className="hero-section-1 w-full md:w-[60%] mt-[100px] z-20 px-6 md:px-12">
-        <img src="/img/Home-page/BEYOND BEAUTY.png" alt="Beyond Beauty" className="mb-6" />
+        <div className='flex flex-col'>
+      <h1
+  className="font-bigerside-expanded uppercase font-[900] max-[368px]:text-[50px] text-[80px] md:text-[120px] leading-none text-center text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+>
+Beyond
+</h1>
+<h1
+  className="font-bigerside-expanded uppercase font-[900] max-[368px]:text-[50px] text-[80px] md:text-[120px] leading-none text-center text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+>
+Beauty
+</h1>
+</div>
         <p className="text-[#796355] text-[16px] font-medium leading-relaxed mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>

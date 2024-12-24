@@ -4,12 +4,13 @@ const Footer = () => {
   return (
     <div className="bg-[#372E27] p-6 md:p-10 flex flex-col md:flex-row md:flex-wrap">
       
-      <div className="section-1 face-transform flex flex-col gap-4 text-white font-medium md:w-[25%]">
-        <img src="/img/Footer/FACE TRANSFROM.png" alt="" className="w-32 md:w-40" />
+      <div className="section-1 face-transform flex flex-col md:mb-0 mb-6 gap-3 md:gap-0 text-white font-medium md:w-[25%]">
+        <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Face</h1>
+    <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Transform</h1>
         <p className="w-[100%] md:w-[250px] text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet neque tortor.
         </p>
-        <div className="icons flex flex-row gap-5">
+        <div className="icons flex flex-row gap-1">
           <img src="/img/Footer/Twitter.png" alt="" />
           <img src="/img/Footer/Ig.png" alt=""  />
           <img src="/img/Footer/FB.png" alt="" />
@@ -17,8 +18,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="section-2 flex flex-col items-start gap-4 text-white font-semibold md:w-[20%]">
-        <h2 className="text-lg md:text-xl">Quick Links</h2>
+      <div className="section-2 flex flex-col items-start text-white font-semibold md:w-[20%] md:mb-0 mb-6 gap-2 md:gap-0">
+      <h1 className="font-bigerside-expanded font-[700] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[20px]">Quich Links</h1>
         <div className="links flex flex-col gap-3 text-[16px] font-medium">
           <a href="/aboutus" className="hover:text-[#D6AF96]">About Us</a>
           <a href="/service" className="hover:text-[#D6AF96]">Service</a>
@@ -27,8 +28,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="section-3 text-white font-semibold md:w-[25%]">
-        <h2 className="text-lg md:text-xl">Contact Us</h2>
+      <div className="section-3 text-white font-semibold md:w-[25%] md:mb-0 mb-6 gap-2 md:gap-0">
+      <h1 className="font-bigerside-expanded font-[700] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[20px]">Contact Us</h1>
         <div className="info-container flex flex-col gap-4 mt-4 text-[16px] font-medium">
           <div className="info-1 flex items-center">
             <img src="/img/Footer/Vector.png" alt="Icon" className="w-4 h-4" />
@@ -46,7 +47,7 @@ const Footer = () => {
       </div>
 
       <div className="section-4 text-white font-semibold md:w-[25%] sm:mt-4">
-        <h1 className="text-lg md:text-xl">Newsletter</h1>
+      <h1 className="font-bigerside-expanded font-[700] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[20px]">Newsletter</h1>
         <div className="flex mt-4">
           <input 
             type="text" 
