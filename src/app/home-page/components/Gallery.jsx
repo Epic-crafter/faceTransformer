@@ -7,7 +7,7 @@ const Gallery = () => {
         <img
           src="/img/Gallery/GALLERY.png"
           alt=""
-          className="mx-auto sm:mx-0 w-[80%] sm:w-auto mb-4"
+          className="mx-auto sm:mx-0 w-[80%] sm:w-[30vw] mb-4"
         />
         <p className="text-[#796355] text-base text-[16px] font-medium text-center sm:text-start leading-relaxed mb-8 sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

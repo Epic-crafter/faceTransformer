@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <div className="flex flex-col bg-[#DED0C5] gap-20">
         <div className="section-1 flex md:justify-start justify-center px-4 md:ml-8 mt-16">
-            <img src="/img/Services/SERVICES.png" alt="" />
+            <img src="/img/Services/SERVICES.png" className='sm:w-[30vw] ' alt="" />
         </div>
 
         <div className="section-2 flex flex-col md:ml-32 mx-4 gap-2">

@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <div className='flex flex-col md:h-auto bg-[#DED0C5]'>
         <div className="section-1 md:ml-20 flex md:justify-start justify-center my-20">
-            <img src="/img/Blog/BLOG.png" alt="" />
+            <img src="/img/Blog/BLOG.png" className='sm:w-[30vw]' alt="" />
         </div>
 
         <div className="section-2 gap-5 flex flex-col md:flex-row ml-4 mb-8">
