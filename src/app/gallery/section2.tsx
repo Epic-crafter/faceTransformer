@@ -21,17 +21,15 @@ export default function ImageGrid() {
   ];
 
   return (
-    <div className="bg-[rgb(222,208,197)] bg-opacity-100 p-8 pb-2"> 
-      {/* Grid Container */}
-      <div className="grid grid-cols-12 gap-4 mx-auto max-w-6xl">
-        {/* Map through the images */}
+    <div className="bg-[rgb(222,208,197)] bg-opacity-100 p-8 pb-2">
+      <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 mx-auto max-w-6xl">
         {images.map((image, index) => (
           <div
             key={index}
-            className="col-span-3 relative"
+            className="col-span-1 md:col-span-2 lg:col-span-3 relative"
             style={{
               height: image.height,
-              marginTop: image.marginTop, 
+              marginTop: image.marginTop,
             }}
           >
             <Image
@@ -39,6 +37,7 @@ export default function ImageGrid() {
               alt={`Image ${index + 1}`}
               layout="fill"
               objectFit="cover"
+              className="rounded"
             />
           </div>
         ))}
