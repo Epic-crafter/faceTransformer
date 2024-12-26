@@ -2,39 +2,59 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Camera, FileText, Type } from 'lucide-react'
+import { Link, FileText, Type } from 'lucide-react'
 
 export default function PostServicePage() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [imageFile, setImageFile] = useState<File | null>(null)
-  const [imagePreview, setImagePreview] = useState<string | null>(null)  // New state for image preview
+  const [imageURL, setImageURL] = useState<string>('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [isSuccess, setIsSuccess] = useState(false)
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData()
-    formData.append('title', title)
-    formData.append('description', description)
-    if (imageFile) {
-      formData.append('image', imageFile)
+    setIsSubmitting(true)
+    setError(null)
+
+    const formData = {
+      title,
+      description,
+      imageURL,
     }
 
-    console.log({ title, description, imageFile })
+    try {
+      const response = await fetch('/api/services', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    router.push('/')
+      if (!response.ok) {
+        throw new Error('Failed to post service')
+      }
+
+      const result = await response.json()
+      console.log(result)
+      setIsSuccess(true)
+      
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        router.push('/services')
+      }, 5000)
+    } catch (err) {
+      console.error('Error posting service:', err)
+      setError('Failed to post service. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0]
-      setImageFile(file)
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string)  // Set the preview URL
-      }
-      reader.readAsDataURL(file)
-    }
+  const handleURLChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setImageURL(e.target.value)
   }
 
   return (
@@ -84,38 +104,50 @@ export default function PostServicePage() {
                 </div>
               </div>
               <div>
-                <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-1">
-                  Upload Image
+                <label htmlFor="imageURL" className="block text-sm font-medium text-gray-700 mb-1">
+                  Image URL
                 </label>
                 <div className="relative group">
-                  <Camera className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 group-hover:text-blue-600 transition duration-150" size={18} />
+                  <Link className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 group-hover:text-blue-600 transition duration-150" size={18} />
                   <input
-                    type="file"
-                    id="image"
-                    accept="image/*"
-                    onChange={handleFileChange}
+                    type="url"
+                    id="imageURL"
+                    value={imageURL}
+                    onChange={handleURLChange}
                     required
                     className="pl-10 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 group-hover:shadow-lg"
+                    placeholder="Enter image URL"
                   />
                 </div>
               </div>
 
-              {/* Display image preview or default text */}
               <div className="mt-4">
-                {imagePreview ? (
-                  <img src={imagePreview} alt="Image Preview" className="w-full h-56 object-cover rounded-md" />
+                {imageURL ? (
+                  <img src={imageURL} alt="Image Preview" className="w-full h-56 object-cover rounded-md" />
                 ) : (
-                  <p className="text-center text-gray-500">No image selected</p>
+                  <p className="text-center text-gray-500">No image URL provided</p>
                 )}
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white p-3 rounded-md shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 text-white p-3 rounded-md shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Post Service
+                {isSubmitting ? 'Posting...' : 'Post Service'}
               </button>
             </form>
+
+            {isSuccess && (
+              <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-md">
+                <p className="font-semibold">Service submitted successfully!</p>
+                <p>Redirecting to services page in 5 seconds...</p>
+              </div>
+            )}
+
+            {error && (
+              <p className="text-red-500 text-center mt-2">{error}</p>
+            )}
           </div>
           <div className="hidden md:block md:flex-1 bg-blue-100 p-8">
             <div className="h-full flex flex-col justify-center items-center text-center transition-transform transform hover:scale-105">
@@ -133,3 +165,4 @@ export default function PostServicePage() {
     </div>
   )
 }
+
