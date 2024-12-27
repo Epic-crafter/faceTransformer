@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="bg-transparent flex flex-col md:flex-row fixed w-full justify-between items-center h-16 z-40">
+    <div className="bg-[#DED0C5] flex flex-col md:flex-row fixed w-full justify-between items-center h-16 z-40">
       <div className="logo absolute left-6 md:static md:p-4">
         <a href="/">
           <h1 className="font-bigerside-expanded uppercase font-[900] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
