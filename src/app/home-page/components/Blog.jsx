@@ -60,6 +60,7 @@ Blog
       <img
         src={blogs[1]?.imageUrl || "/img/Blog/Image.png"}
         alt={blogs[1]?.title || "Blog Image"}
+        className='md:h-[38vh]'
       />
       <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-center text-[20px] sm:text-[34px] md:text-[30px]">
         {blogs[1]?.title || "Blog Title"}
