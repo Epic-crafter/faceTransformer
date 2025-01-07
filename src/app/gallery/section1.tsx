@@ -15,7 +15,7 @@ const galleryItems = [
   {
     id: 1,
     name: "MRS. SMITH",
-    image: "/img/image copy 3.png",
+    image: "/image copy 3.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
