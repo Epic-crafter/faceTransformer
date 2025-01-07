@@ -2,22 +2,22 @@ import Image from "next/image";
 
 export default function ImageGrid() {
   const images = [
-    { src: "/image copy 2.png", height: "350px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "9px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "-141px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "9px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "-140px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "0px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "9px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "-141px" },
-    { src: "/image copy 2.png", height: "200px", marginTop: "9px" },
-    { src: "/image copy 2.png", height: "350px", marginTop: "-140px" }
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "9px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "-141px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "9px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "-140px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "0px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "9px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "-141px" },
+    { src: "/img/image copy 2.png", height: "200px", marginTop: "9px" },
+    { src: "/img/image copy 2.png", height: "350px", marginTop: "-140px" }
   ];
 
   return (
