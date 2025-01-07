@@ -35,12 +35,12 @@ const Home = () => {
       <div className="hero-section-1 w-full md:w-[60%] mt-[100px] z-20 px-6 md:px-12">
         <div className='flex flex-col'>
       <h1
-  className="font-bigerside-expanded uppercase font-[900] max-[368px]:text-[50px] text-[80px] md:text-[120px] leading-none text-center text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+  className="font-bigerside-expanded uppercase font-[900] max-[368px]:text-[50px] text-[60px] md:text-[120px] leading-none text-center text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
 >
 Beyond
 </h1>
 <h1
-  className="font-bigerside-expanded uppercase font-[900] max-[368px]:text-[50px] text-[80px] md:text-[120px] leading-none text-center text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+  className="font-bigerside-expanded uppercase font-[900] max-[368px]:text-[50px] text-[60px] md:text-[120px] leading-none text-center text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
 >
 Beauty
 </h1>
