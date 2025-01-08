@@ -21,13 +21,13 @@ export async function POST(request: Request) {
       title,
       description,
       imageURL,
-      createdAt: new Date()
+      createdAt: new Date(),
     });
 
-    return NextResponse.json({ 
-      success: true, 
+    return NextResponse.json({
+      success: true,
       id: result.insertedId,
-      message: 'Service posted successfully'
+      message: 'Service posted successfully',
     }, { status: 201 });
   } catch (error) {
     console.error('Error posting service:', error);
@@ -37,3 +37,19 @@ export async function POST(request: Request) {
   }
 }
 
+export async function GET() {
+  try {
+    await client.connect();
+    const database = client.db('serviceDB');
+    const collection = database.collection('services');
+
+    const services = await collection.find({}).toArray();
+
+    return NextResponse.json({ success: true, services }, { status: 200 });
+  } catch (error) {
+    console.error('Error fetching services:', error);
+    return NextResponse.json({ success: false, error: 'Failed to fetch services' }, { status: 500 });
+  } finally {
+    await client.close();
+  }
+}

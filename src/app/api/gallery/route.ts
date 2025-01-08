@@ -4,6 +4,23 @@ import { MongoClient } from 'mongodb';
 const uri = process.env.MONGO_URI as string;
 const client = new MongoClient(uri);
 
+export async function GET() {
+  try {
+    await client.connect();
+    const db = client.db('gallery');
+    const collection = db.collection('images');
+
+    const images = await collection.find({}).toArray();
+
+    return NextResponse.json(images, { status: 200 });
+  } catch (error) {
+    console.error('Error in GET /api/gallery:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  } finally {
+    await client.close();
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { title, imageUrl } = await req.json();
@@ -30,4 +47,3 @@ export async function POST(req: NextRequest) {
     await client.close();
   }
 }
-
