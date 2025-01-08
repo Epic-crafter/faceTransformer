@@ -6,29 +6,36 @@ import { Camera, Type } from 'lucide-react'
 
 export default function PostGalleryImagePage() {
   const [title, setTitle] = useState('')
-  const [imageFile, setImageFile] = useState<File | null>(null)
-  const [imagePreview, setImagePreview] = useState<string | null>(null)
+  const [imageUrl, setImageUrl] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setImageFile(e.target.files[0])
-      setImagePreview(URL.createObjectURL(e.target.files[0]))
-    }
-  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData()
-    formData.append('title', title)
-    if (imageFile) {
-      formData.append('image', imageFile)
+    setIsLoading(true)
+
+    try {
+      const response = await fetch('/api/gallery', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title, imageUrl }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to post image')
+      }
+
+      const data = await response.json()
+      console.log('Image posted successfully:', data)
+      router.push('/gallery')
+    } catch (error) {
+      console.error('Error posting image:', error)
+      // Handle error (e.g., show error message to user)
+    } finally {
+      setIsLoading(false)
     }
-
-    console.log({ title, imageFile })
-
-    // Example redirection
-    router.push('/gallery')
   }
 
   return (
@@ -57,32 +64,39 @@ export default function PostGalleryImagePage() {
               </div>
             </div>
             <div>
-              <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-1">
-                Upload Image
+              <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700 mb-1">
+                Image URL
               </label>
               <div className="relative group">
                 <Camera className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 group-hover:text-blue-600 transition duration-200" size={18} />
                 <input
-                  type="file"
-                  id="image"
-                  accept="image/*"
-                  onChange={handleFileChange}
+                  type="url"
+                  id="imageUrl"
+                  value={imageUrl}
+                  onChange={(e) => setImageUrl(e.target.value)}
                   required
                   className="pl-10 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 group-hover:shadow-lg"
+                  placeholder="Enter image URL"
                 />
               </div>
-              {imagePreview && (
+              {imageUrl && (
                 <div className="mt-4">
-                  <p className="text-sm text-gray-500">Preview:</p>
-                  <img src={imagePreview} alt="Preview" className="w-full h-auto rounded-md shadow-md transition-transform transform hover:scale-105" />
+                  <p className="text-sm text-gray-500 mb-2">Image Preview:</p>
+                  <img
+                    src={imageUrl}
+                    alt="Preview"
+                    className="max-w-full max-h-64 border rounded shadow-lg"
+                    onError={(e) => (e.currentTarget.style.display = 'none')} // Hide image if URL is invalid
+                  />
                 </div>
               )}
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white p-3 rounded-md shadow-lg hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+              disabled={isLoading}
+              className="w-full bg-blue-600 text-white p-3 rounded-md shadow-lg hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out disabled:opacity-50"
             >
-              Post Image
+              {isLoading ? 'Posting...' : 'Post Image'}
             </button>
           </form>
         </div>
