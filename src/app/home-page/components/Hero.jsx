@@ -46,7 +46,8 @@ Beauty
 </h1>
 </div>
         <p className="text-[#796355] text-[16px] font-medium leading-relaxed mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Unveil the essence of beauty, beyond appearances and into the heart of confidence, self-care, and timeless elegance. 
+        Welcome to Beyond Beauty—where your journey to feeling and looking your best begins.
         </p>
         <div className="img-section flex flex-wrap gap-5 justify-center">
           <div onClick={() => handleBothImages("/img/Home-page/hero-section-2-strip-img/enhance.png", "/img/Home-page/hero-menu-img/GAL1.png")}>

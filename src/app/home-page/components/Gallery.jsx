@@ -32,8 +32,7 @@ const Gallery = () => {
           GALLERY
         </h1>
         <p className="text-[#796355] text-base text-[16px] font-medium text-center sm:text-start leading-relaxed mb-8 sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        Behold a visual symphony of beauty, captured frame by frame. Our gallery shows art in transformation, radiance, and personality. Every image is linked to the story of nurture, style, and the way toward embracing true beauty. Chic, astound, get inspired, and undertake your beauty journey.         </p>
       </div>
 
       <div className="section-2 flex flex-wrap justify-center gap-5 mb-6 px-4">

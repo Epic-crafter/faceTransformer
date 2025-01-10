@@ -1,40 +1,68 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card } from "@/components/ui/card"
 
+interface Service {
+  title: string;
+  description: string;
+  imageURL: string;
+}
+
 export default function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [services, setServices] = useState<Service[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
-  const services = [
-    {
-      title: "LIP AUGMENTATION",
-      icon: "/aboutus/image.png",
-      description:
-        "My expertise includes managing complex maxillofacial trauma cases, and I pride myself on my result-oriented approach and positive attitude. This focus allows me to achieve optimal results and ensure patient satisfaction, fostering happy and content patients.",
-    },
-    {
-      title: "NOSE AUGMENTATION (RHINOPLASTY)",
-      icon: "/nose-augmentation-icon.png",
-      description:
-        "My expertise includes managing complex maxillofacial trauma cases, and I pride myself on my result-oriented approach and positive attitude. This focus allows me to achieve optimal results and ensure patient satisfaction, fostering happy and content patients.",
-    },
-    {
-      title: "CHEEK AUGMENTATION",
-      icon: "/cheek-augmentation-icon.png",
-      description:
-        "My expertise includes managing complex maxillofacial trauma cases, and I pride myself on my result-oriented approach and positive attitude. This focus allows me to achieve optimal results and ensure patient satisfaction, fostering happy and content patients.",
-    },
-  ]
+  useEffect(() => {
+    async function fetchServices() {
+      try {
+        const response = await fetch('/api/services')
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const data = await response.json()
+        if (data.success) {
+          setServices(data.services)
+        } else {
+          throw new Error(data.error || 'Failed to fetch services')
+        }
+      } catch (error) {
+        console.error('Error fetching services:', error)
+        setError(error instanceof Error ? error.message : 'An unknown error occurred')
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchServices()
+  }, [])
+
+  if (isLoading) {
+    return <div className="min-h-screen bg-[rgb(222,208,197)] flex items-center justify-center">Loading...</div>
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-[rgb(222,208,197)] flex items-center justify-center">
+        <div className="text-red-600 text-center">
+          <h2 className="text-2xl font-bold mb-4">Error</h2>
+          <p>{error}</p>
+          <p className="mt-4 text-sm">Please check the console for more details.</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>
       <div className="min-h-screen bg-[rgb(222,208,197)] p-4 sm:p-8 pb-2">
         <div className="max-w-7xl mx-auto mt-8 sm:mt-[39px]">
-        <h1 className="mb-8 sm:mb-12 w-full max-w-md mx-auto text-center text-white text-[clamp(2rem,5vw,4rem)] font-[651] uppercase leading-[1.2] tracking-[0%] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-bigerside">
-  Services
-</h1>
+          <h1 className="mb-8 sm:mb-12 w-full max-w-md mx-auto text-center text-white text-[clamp(2rem,5vw,4rem)] font-[651] uppercase leading-[1.2] tracking-[0%] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-bigerside">
+            Services
+          </h1>
 
           <div className="space-y-8 sm:space-y-12">
             {services.map((service, index) => (
@@ -61,7 +89,7 @@ export default function Services() {
                   >
                     <div className="bg-[#f2e1d0] rounded-full p-4 mb-4">
                       <Image
-                        src={service.icon}
+                        src={service.imageURL}
                         alt={service.title}
                         width={48}
                         height={48}
@@ -90,3 +118,4 @@ export default function Services() {
     </div>
   )
 }
+
