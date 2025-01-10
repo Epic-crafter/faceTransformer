@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
 const uri = process.env.MONGO_URI as string;
 const client = new MongoClient(uri);
@@ -42,6 +42,36 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true, id: result.insertedId }, { status: 201 });
   } catch (error) {
     console.error('Error in POST /api/gallery:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  } finally {
+    await client.close();
+  }
+}
+
+
+
+export async function DELETE(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json({ error: 'Image ID is required' }, { status: 400 });
+    }
+
+    await client.connect();
+    const db = client.db('gallery');
+    const collection = db.collection('images');
+
+    const result = await collection.deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 0) {
+      return NextResponse.json({ error: 'Image not found' }, { status: 404 });
+    }
+
+    return NextResponse.json({ success: true }, { status: 200 });
+  } catch (error) {
+    console.error('Error in DELETE /api/gallery:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   } finally {
     await client.close();
