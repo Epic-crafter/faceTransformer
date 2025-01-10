@@ -1,30 +1,9 @@
 "use client"
 import React, { useState } from 'react'
 import { useEffect } from 'react';
-"use client"
-import React, { useState } from 'react'
-import { useEffect } from 'react';
+
 
 const Blog = () => {
-
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(()=> {
-    const fetchBlogs = async() => {
-      try {
-        const res = await fetch('/api/blog/get-recent-3');
-        const data = await res.json();
-        console.log(data)
-        setBlogs(data);
-      } catch (err) {
-        console.log("Error fetching blogs", err);
-      }
-    };
-
-    fetchBlogs();
-  }, [])
-
-
 
   const [blogs, setBlogs] = useState([]);
 
