@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const pathname = usePathname(); 
-  const showSidebarPages = ['/admin/serviceposting', '/admin/galleryposting', '/admin/post-blog'];
+  const showSidebarPages = ['/admin/serviceposting', '/admin/galleryposting', '/admin/post-blog','/admin/deleteblog','/admin/deleteservices','/admin/deletegallery','/admin/getcontactus',];
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,7 +32,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const navigationItems = [
     { icon: <FileText className="h-5 w-5" />, label: 'SERVICE POSTING', href: '/admin/serviceposting' },
     { icon: <Image className="h-5 w-5" />, label: 'GALLERY POSTING', href: '/admin/galleryposting' },
-    { icon: <FileText className="h-5 w-5" />, label: 'B POSTING', href: '/admin/post-blog' },
+    { icon: <FileText className="h-5 w-5" />, label: 'BLOG POSTING', href: '/admin/post-blog' },
+    { icon: <FileText className="h-5 w-5" />, label: 'DELETE BLOG', href: '/admin/deleteblog' },
+    { icon: <FileText className="h-5 w-5" />, label: ' DELETE SERVICES', href: '/admin/deleteservices' },
+    { icon: <FileText className="h-5 w-5" />, label: ' DELETE GALLERY', href: '/admin/deletegallery' },
+    { icon: <FileText className="h-5 w-5" />, label: ' GET CONTACT US', href: '/admin/getcontactus' },
   ];
 
   return (
