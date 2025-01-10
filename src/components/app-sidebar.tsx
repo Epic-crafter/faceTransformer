@@ -51,7 +51,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel><Button>Back</Button></SidebarGroupLabel>
+          <SidebarGroupLabel>Logo</SidebarGroupLabel>
           <SidebarGroupContent className="mt-10">
             <SidebarMenu>
               {items.map((item) => (

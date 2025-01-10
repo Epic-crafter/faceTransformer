@@ -21,24 +21,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     "/admin/getcontactus",
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
-      if (window.innerWidth >= 1024) {
-        setIsSidebarOpen(true);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   const navigationItems = [
     {
       icon: <FileText className="h-5 w-5" />,
@@ -81,8 +63,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <SidebarProvider>
       <AppSidebar />
       <main className="flex-1 flex flex-col relative min-h-screen bg-[#e6c7b3]  overflow-y-auto w-full md:w-auto md:px-10 md:pb-0">
-        <div className="w-full p-3 bg-white absolute top-0 left-0">
-          <SidebarTrigger className=" w-10" /> </div>
+        <div className="w-full p-3 bg-white absolute flex top-0 justify-between left-0">
+          <SidebarTrigger className=" w-10" />
+          <Button>Back</Button>
+        </div>
         {children}
       </main>
     </SidebarProvider>
