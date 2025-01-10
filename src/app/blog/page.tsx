@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import BlogPage from "./component/BlogPage";
+import Navbar from "../home-page/components/Navbar";
 
 // export const metadata = {
 //   title: "Latest blogs for better guidance - College Counsel",
@@ -14,6 +15,8 @@ const page = () => {
  
   return (
     <>
+            <Navbar />
+
      <BlogPage/>
     </>
   );

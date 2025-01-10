@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import Navbar from '../home-page/components/Navbar';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -57,6 +58,9 @@ export default function Contact() {
   };
 
   return (
+    <>
+            <Navbar />
+
     <div className="bg-[#d9cbb7] min-h-screen flex flex-col items-center justify-center p-8">
       <h1 className="text-6xl font-black text-white mb-8 drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] font-[Helvetica Neue, Arial, sans-serif]">
         CONTACT US
@@ -162,6 +166,7 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

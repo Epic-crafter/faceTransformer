@@ -5,9 +5,6 @@ import { NextResponse } from "next/server";
 export const dynamic='force-dynamic'
 export async function GET(req:any,{params}:any){
     try{
-        const a=req
-        console.log(a);
-        
         const url = params.getBlogByUrl;
         await connectDb()
         const results = await Blogs.aggregate([

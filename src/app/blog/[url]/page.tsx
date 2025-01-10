@@ -3,7 +3,7 @@ import React from "react";
 import Blogpage from "./component/blogpage";
 
 const Page = ({ params }:any) => {
-  return <Blogpage params={params} />;
+  return( <Blogpage params={params} />);
 };
 export async function generateMetadata({ params }:any) {
   let blog = {
@@ -23,10 +23,10 @@ export async function generateMetadata({ params }:any) {
   }
 
   return {
-    title: `${blog?.title} - My hr expert`,
+    title: `${blog?.title} - Face transformers`,
     description: blog?.description,
     openGraph: {
-      title: ` ${blog?.title} -  My hr expert`,
+      title: ` ${blog?.title} - Face transformers`,
       description: blog?.description,
       url: `${process.env.BASE_URL}/blog/${params.url}`,
     },
@@ -36,4 +36,4 @@ export async function generateMetadata({ params }:any) {
     },
   };
 }
-export default Page;
+ export default Page;

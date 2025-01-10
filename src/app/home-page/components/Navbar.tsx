@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
   const [isClick, setIsClick] = useState(false);
@@ -7,6 +8,16 @@ const Navbar: React.FC = () => {
   const toggleNavbar = (): void => {
     setIsClick(!isClick);
   };
+
+  const [adminPage,setAdminPage] = useState(true)
+  const pathname = usePathname();
+  useEffect(()=>{
+    const isAdminPath = pathname.includes('admin') ? false : true;
+   setAdminPage(isAdminPath)
+  },[pathname])
+  if (!adminPage){
+    return;
+  }
 
   return (
     <div className="bg-[#DED0C5] flex flex-col md:flex-row fixed w-full justify-between items-center h-16 z-40">

@@ -1,6 +1,17 @@
-import React from 'react'
+"use client"
+import { usePathname } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
 
 const Footer = () => {
+  const [adminPage,setAdminPage] = useState(false)
+  const pathname = usePathname();
+  useEffect(()=>{
+    const isAdminPath = pathname.includes('admin') ? false : true;
+   setAdminPage(isAdminPath)
+  },[pathname])
+  if (!adminPage){
+    return;
+  }
   return (
     <div className="bg-[#372E27] p-6 md:p-10 flex flex-col md:flex-row md:flex-wrap">
       

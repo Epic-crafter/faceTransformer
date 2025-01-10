@@ -1,7 +1,11 @@
 import React from "react";
+import Navbar from "../home-page/components/Navbar";
 
 const Page = () => {
   return (
+    <>
+    <Navbar />
+
     <div className="bg-[#DED0C5] flex flex-col">
       <div className="sectoion-1 flex md:flex-row flex-col-reverse items-center pt-14">
         <div className="container-section-1 md:w-[70%] flex flex-col md:p-14 p-4 ">
@@ -18,26 +22,34 @@ const Page = () => {
           </div>
 
           <div className="about-text flex flex-col gap-4 text-center md:text-start text-[16px] md:text-[20px] font-medium mt-4">
-            <p className="text-[#796355]">
-            Passion for Surgical and Cosmetic Improvement of the Face
-
-In addition to separate, further qualifications and dear interest in facial plastic surgery, I am a maxillofacial surgeon of skills and dedication with over eight years of experience. The entire exercise is very patient-centered through listening skills, understanding each one's need, and striving to provide the best possible result, be it through surgical or non-surgical means.
-
+            <p>
+              I perform first-rate surgical techniques in dealing with
+              maxillofacial trauma, always taking into account that, aside from
+              functional restoration, the repair of aesthetic goals is equally
+              important. I've also honed my abilities at handling complex issues
+              of facial reconstruction, jaw correction, and soft tissue repair,
+              with customized solutions present for every specific need. Taking
+              a holistic approach toward the operation and fulfillment of my
+              work, patients have moved on confidently with an improved zest for
+              life.
             </p>
             <p>
-            I perform first-rate surgical techniques in dealing with maxillofacial trauma, always taking into account that, aside from functional restoration, the repair of aesthetic goals is equally important. I've also honed my abilities at handling complex issues of facial reconstruction, jaw correction, and soft tissue repair, with customized solutions present for every specific need. Taking a holistic approach toward the operation and fulfillment of my work, patients have moved on confidently with an improved zest for life. 
-
+              In addition to technical proficiency, I considered the critical
+              dimension of making the patient's medical experience comforting
+              and one of trust. My attitude towards all my patients and their
+              ailments is cheerful, which helps me create strong bonds as a
+              physician with them. I focus primarily on improving patient
+              satisfaction, maintaining standards of excellence through
+              attention to detail and follow-up after treatment.
             </p>
-            <p>
-
-In addition to technical proficiency, I considered the critical dimension of making the patient's medical experience comforting and one of trust. My attitude towards all my patients and their ailments is cheerful, which helps me create strong bonds as a physician with them. I focus primarily on improving patient satisfaction, maintaining standards of excellence through attention to detail and follow-up after treatment.
-
-            </p>
 
             <p>
-            Throughout my professional journey, I have been driven by a passion for achieving the highest levels of patient satisfaction, constantly putting myself in conditions for happy and joyful patients. I still remain committed to delivering the finest of outcomes while contributing towards the continuous advancement of maxillofacial and facial plastic surgery. 
-
-
+              Throughout my professional journey, I have been driven by a
+              passion for achieving the highest levels of patient satisfaction,
+              constantly putting myself in conditions for happy and joyful
+              patients. I still remain committed to delivering the finest of
+              outcomes while contributing towards the continuous advancement of
+              maxillofacial and facial plastic surgery.
             </p>
           </div>
         </div>
@@ -76,7 +88,9 @@ In addition to technical proficiency, I considered the critical dimension of mak
                 </div>
                 <div
                   className={`${
-                    index % 2 !== 0 ? "text-1 md:order-1 md:items-end md:text-end" : "text-2 md:order-2 md:text-start"
+                    index % 2 !== 0
+                      ? "text-1 md:order-1 md:items-end md:text-end"
+                      : "text-2 md:order-2 md:text-start"
                   } md:w-[90%] w-full flex flex-col md:items-start items-center  text-center`}
                 >
                   <p>{item.description}</p>
@@ -120,6 +134,7 @@ In addition to technical proficiency, I considered the critical dimension of mak
         </div>
       </div>
     </div>
+    </>
   );
 };
 

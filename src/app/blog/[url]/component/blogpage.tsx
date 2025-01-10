@@ -2,6 +2,7 @@
 "@/app/global.css";
 import Image from "next/image";
 import { ImageFormat, ListFormat, ParagraphField, TableField } from "./Formats";
+import Navbar from "@/app/home-page/components/Navbar";
 
 const Blogpage = async ({ params }:any) => {
   let blog;
@@ -19,17 +20,19 @@ const Blogpage = async ({ params }:any) => {
 
   return (
     <>
+            <Navbar />
+
       <div className="relative university-ab blogpage flex flex-col w-full mt-20  p-2 lg:py-10 lg:px-16 gap-10">
         <div className="w-full flex justify-center gap-4">
           <div className="lg:w-[75%] mx-auto w-full">
-            <Image
+           {blog?.imageUrl&&<Image
               width={1200}
               height={600}
               priority
               className="h-auto w-full object-cover  rounded-xl"
               src={blog?.imageUrl || "/image/default.jpg"}
               alt={`${blog?.title} image`}
-            />
+            />}
 
             <h1 className="xl:text-4xl lg:text-3xl text-3xl lg:mt-12 mt-6 font-semibold">
               {blog?.title}
