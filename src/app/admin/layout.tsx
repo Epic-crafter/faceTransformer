@@ -62,7 +62,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="flex-1 flex flex-col relative min-h-screen bg-[#e6c7b3]  overflow-y-auto w-full md:w-auto md:px-10 md:pb-0">
+      <main className="flex-1 flex flex-col relative min-h-screen bg-[#e6c7b3]  overflow-y-auto w-full md:w-auto md:px-10 pt-14 md:pb-0">
         <div className="w-full p-3 bg-white absolute flex top-0 justify-between left-0">
           <SidebarTrigger className=" w-10" />
           <Button>Back</Button>
