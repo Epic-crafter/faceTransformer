@@ -1,36 +1,61 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function ImageGrid() {
-  const images = [
-    { src: "/image copy 2.png", alt: "Image 1" },
-    { src: "/image copy 2.png", alt: "Image 2" },
-    { src: "/image copy 2.png", alt: "Image 3" },
-    { src: "/image copy 2.png", alt: "Image 4" },
-    { src: "/image copy 2.png", alt: "Image 5" },
-    { src: "/image copy 2.png", alt: "Image 6" },
-    { src: "/image copy 2.png", alt: "Image 7" },
-    { src: "/image copy 2.png", alt: "Image 8" },
-    { src: "/image copy 2.png", alt: "Image 9" },
-    { src: "/image copy 2.png", alt: "Image 10" },
-    { src: "/image copy 2.png", alt: "Image 11" },
-    { src: "/image copy 2.png", alt: "Image 12" },
-    { src: "/image copy 2.png", alt: "Image 13" },
-    { src: "/image copy 2.png", alt: "Image 14" },
-    { src: "/image copy 2.png", alt: "Image 15" },
-    { src: "/image copy 2.png", alt: "Image 16" },
-  ];
+  interface Image {
+    _id: string;
+    imageUrl: string;
+  }
+
+  const [images, setImages] = useState<Image[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("/api/image");
+        if (!response.ok) {
+          throw new Error("Failed to fetch images");
+        }
+        const data = await response.json();
+        setImages(data);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unknown error occurred");
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="bg-[rgb(222,208,197)] bg-opacity-100 p-8">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mx-auto max-w-6xl">
         {images.map((image, index) => (
           <div
-            key={index}
+            key={image._id || index}
             className="aspect-square relative overflow-hidden rounded"
           >
             <Image
-              src={image.src}
-              alt={image.alt}
+              src={image.imageUrl}
+              alt={`Image ${index + 1}`}
               fill
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
               className="object-cover"
@@ -41,4 +66,3 @@ export default function ImageGrid() {
     </div>
   );
 }
-
