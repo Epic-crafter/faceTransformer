@@ -24,30 +24,29 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:h-auto bg-[#DED0C5]">
-      <div className="section-1 ml-4 sm:ml-8 mt-20 sm:mt-32 md:mt-14 mb-8">
-        <h1
-          className="font-bigerside-expanded font-[800] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-center md:text-start mb-10"
-        >
+    <div className="flex flex-col bg-[#DED0C5] py-12 px-4">
+      <div className="section-1 text-center sm:text-left mb-12">
+        <h1 className="font-bigerside-expanded font-[800] text-[50px] sm:text-[80px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] mb-6">
           GALLERY
         </h1>
-        <p className="text-[#796355] text-base text-[16px] font-medium text-center sm:text-start leading-relaxed mb-8 sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
-        Behold a visual symphony of beauty, captured frame by frame. Our gallery shows art in transformation, radiance, and personality. Every image is linked to the story of nurture, style, and the way toward embracing true beauty. Chic, astound, get inspired, and undertake your beauty journey.         </p>
+        <p className="text-[#796355] text-base text-[16px] font-medium leading-relaxed sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
+          Behold a visual symphony of beauty, captured frame by frame. Our gallery shows art in transformation, radiance, and personality. Every image is linked to the story of nurture, style, and the way toward embracing true beauty. Chic, astound, get inspired, and undertake your beauty journey.
+        </p>
       </div>
 
-      <div className="section-2 flex flex-wrap justify-center gap-5 mb-6 px-4">
+      <div className="section-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
         {images.map((image, index) => (
           <div
             key={image._id || index}
-            className="flex flex-col md:w-[20%] px-6 sm:px-8 py-6 md:px-0 md:py-0 gap-6 relative"
+            className="flex flex-col items-center bg-white shadow-lg rounded-lg overflow-hidden"
           >
             <img
               src={image.imageUrl}
-              className="w-full max-w-[275px] mx-auto"
+              className="w-full h-[200px] object-cover"
               alt={image.title || 'Gallery Image'}
             />
-            <div className="container-text py-3 px-6 border rounded-[10px] text-[14px] font-semibold bg-gradient-to-b from-[#F0DDD1] via-[#FFFFFF] to-[#DFD8D4]">
-              <p>{image.title}</p>
+            <div className="container-text py-4 px-6 text-[14px] font-semibold bg-white">
+              <p className="truncate">{image.title}</p>
             </div>
           </div>
         ))}
