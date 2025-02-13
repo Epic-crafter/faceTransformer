@@ -15,7 +15,7 @@ const Login = () => {
             <div className='absolute h-[2px] w-full bottom-[-5px] bg-[#372E27]'></div>
             </div>
             <div className='flex md:flex-row justify-between gap-3 flex-col'>
-            <p>You haven't an account?</p>
+            <p>You haven&apos;t an account?</p>
             <a href="/signup" className='hover:underline'>SignUp</a>
             </div>
             <button className='px-6 py-3 bg-transparent border-black border-2 rounded-[50px] font-semibold text-[16px] mt-2 text-black'>Login</button>
