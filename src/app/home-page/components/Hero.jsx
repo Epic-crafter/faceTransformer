@@ -5,6 +5,7 @@ const Home = () => {
   const [currentImage, setCurrentImage] = useState("/img/Home-page/imgggg 1.png");
   const [currentText, setCurrentText] = useState("/img/Home-page/hero-section-2-strip-img/enhance.png");
   const [isSliding, setIsSliding] = useState(false);
+
   const handleBothImages = (restoreImageSrc, galleryImageSrc) => {
     handleText(restoreImageSrc);
     handleImageClick(galleryImageSrc);  
@@ -95,23 +96,18 @@ Transformer
             />
           </div>
         </div>
-      </div>
-
-      <div className="hero-section-2 w-full md:w-[40%] flex justify-center bg-[url('/img/imgggg 1.png')]">
-        <div className="w-[100vw] h-[500px] md:h-[720px] flex justify-center relative bg-cover mt-8 md:mt-0">
-          <div
-            className={`z-20 absolute top-0 left-0 object-cover transition-transform duration-500 ${
+        <div className="hero-section-2 w-[40%] bg-[url('/img/imgggg 1.png')]">
+          <div className="h-[720px] relative bg-cover">
+            <div className={`z-20 absolute top-0 left-0 object-cover transition-transform duration-500 ${
               isSliding ? "translate-x-full" : "translate-x-0"
-            }`}
-          >
-            <img className="md:h-[700px] h-[500px]" src={currentText} />
-          </div>
-          <div
-            className={`absolute top-0 left-0 h-full w-full object-cover transition-transform duration-500 ${
+            }`}>
+              <img className="h-[700px]" src={currentText || "/placeholder.svg"} alt="Text Overlay" />
+            </div>
+            <div className={`absolute top-0 left-0 h-full w-full object-cover transition-transform duration-500 ${
               isSliding ? "translate-x-full" : "translate-x-0"
-            }`}
-          >
-            <img className="h-full w-full object-cover" src={currentImage} alt="Foreground Image" />
+            }`}>
+              <img className="h-full w-full object-cover" src={currentImage || "/placeholder.svg"} alt="Foreground Image" />
+            </div>
           </div>
         </div>
       </div>
@@ -120,3 +116,4 @@ Transformer
 };
 
 export default Home;
+

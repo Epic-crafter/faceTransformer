@@ -18,7 +18,7 @@ const Blog = () => {
     };
 
     fetchBlogs();
-  }, [])
+  }, []);
 
   return (
     <div className='flex flex-col md:h-auto bg-[#DED0C5] px-4 md:px-20 py-12'>
