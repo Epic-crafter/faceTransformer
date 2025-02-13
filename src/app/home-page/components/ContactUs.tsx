@@ -5,7 +5,7 @@ const Gallery = () => {
     <div className='bg-[#DED0C5] flex flex-col h-max-full md:px-12 px-4'>
         <div className="section-1 flex justify-center md:justify-start px-4 md:px-6">
         <h1
-  className="font-bigerside-expanded uppercase font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
+  className="font-bigerside-expanded  font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
 >
 Contact Us
 </h1>
@@ -13,8 +13,8 @@ Contact Us
 
         <div className="section-2 w-full bg-[#D6AF96] md:gap-0 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] gap-5 rounded-[10px] border-none flex md:flex-row flex-col justify-between px-6 md:px-12 py-8">
                 <div className="form-section-1 md:w-1/2 w-auto text-[20px] font-normal">
-                    <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-start text-[25px] md:text-[30px]">Fill up this form to <span className='text-white'>get</span></h1>
-                    <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[25px] md:text-[30px]">a free consultation</h1>
+                    <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-start text-[25px] md:text-[30px]">Fill up this form to <span className='text-white'>get</span></h1>
+                    <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[25px] md:text-[30px]">a free consultation</h1>
                     <p>Dont forget to check out our socials!! They will be linked right </p>
                     <p>here for yall to get an idea about us!! </p>
                     <p>Go show us some love!</p>
@@ -22,7 +22,7 @@ Contact Us
 
                 <div className="form-section-2 md:w-1/2 bg-[#F1EFEE] md:p-8 p-3 gap-[10px] flex flex-col rounded-[10px]">
                     <div className="head-img">
-                        <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-start text-[20px] sm:text-[34px] md:text-[33px]">Fill it up now!!</h1>
+                        <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-black text-start text-[20px] sm:text-[34px] md:text-[33px]">Fill it up now!!</h1>
                         </div>
                         <form action="" className='flex flex-col gap-5'>
                             <div className="input-1 w-full gap-5 flex md:flex-row flex-col">

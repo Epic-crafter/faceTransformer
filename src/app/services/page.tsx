@@ -63,7 +63,7 @@ export default function Services() {
 
       <div className="min-h-screen bg-[rgb(222,208,197)] p-4 sm:p-8 pb-2">
         <div className="max-w-7xl mx-auto mt-8 sm:mt-[39px]">
-          <h1 className="mb-8 sm:mb-12 w-full max-w-md mx-auto text-center text-white text-[clamp(2rem,5vw,4rem)] font-[651] uppercase leading-[1.2] tracking-[0%] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-bigerside">
+          <h1 className="mb-8 sm:mb-12 w-full max-w-md mx-auto text-center text-white text-[clamp(2rem,5vw,4rem)] font-[651]  leading-[1.2] tracking-[0%] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-bigerside">
             Services
           </h1>
 

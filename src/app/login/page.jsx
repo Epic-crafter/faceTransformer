@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div className='bg-[#DED0C5] flex flex-col justify-center items-center'>
       <div className='py-12'>
-        <h1 className='font-bigerside-expanded uppercase font-[900] md:text-[70px] text-[50px] text-white mt-10'>Login</h1>
+        <h1 className='font-bigerside-expanded  font-[900] md:text-[70px] text-[50px] text-white mt-10'>Login</h1>
         <div className='flex flex-col py-20 px-10 gap-6 border-[1px] rounded-[10px] border-black bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96]'>
           <div className='relative'>
             <input type="text" placeholder='Your Email' className='bg-transparent focus:outline-none focus:placeholder-transparent placeholder-[#372E27] font-[700]'/>

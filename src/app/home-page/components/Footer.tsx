@@ -16,8 +16,8 @@ const Footer = () => {
     <div className="bg-[#372E27] p-6 md:p-10 flex flex-col md:flex-row md:flex-wrap">
       
       <div className="section-1 face-transform flex flex-col md:mb-0 mb-6 gap-3 md:gap-0 text-white font-medium md:w-[25%]">
-        <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Face</h1>
-    <h1 className="font-bigerside-expanded uppercase font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Transform</h1>
+        <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Face</h1>
+    <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Transform</h1>
         <p className="w-[100%] md:w-[250px] text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet neque tortor.
         </p>

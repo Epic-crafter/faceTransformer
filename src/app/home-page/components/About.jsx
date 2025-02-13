@@ -6,7 +6,7 @@ const About = () => {
       <div className="section-1 pt-20 pb-6 md:ml-8 mt-6 w-auto md:w-[50%]">
         <div className='text-img ml-4 py-6'>
         <h1
-  className="font-bigerside-expanded uppercase font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start"
+  className="font-bigerside-expanded  font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start"
 >
 About Us
 </h1>
