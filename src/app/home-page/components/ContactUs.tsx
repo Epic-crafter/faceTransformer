@@ -2,10 +2,10 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-    <div className='bg-[#DED0C5] flex flex-col h-max-full md:px-12 px-4'>
-        <div className="section-1 flex justify-center md:justify-start px-4 md:px-6">
+    <div className='bg-[#DED0C5] mt-10 flex flex-col h-max-full px-6 md:p-12'>
+        <div className="section-1 flex justify-center md:justify-start">
         <h1
-  className="font-bigerside-expanded  font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
+  className="font-bigerside-expanded  font-[900] text-[50px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
 >
 Contact Us
 </h1>

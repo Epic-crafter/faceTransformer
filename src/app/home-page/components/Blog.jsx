@@ -21,10 +21,10 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className='flex flex-col md:h-auto bg-[#DED0C5] px-4 md:px-20 py-12'>
-      <div className="section-1 md:ml-20 flex md:justify-start justify-center mt-12">
+    <div className='flex flex-col mt-10 md:h-auto bg-[#DED0C5] px-4 md:p-12'>
+      <div className="section-1 flex md:justify-start justify-center mt-12">
         <h1
-          className="font-bigerside-expanded font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
+          className="font-bigerside-expanded font-[900] text-[50px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10"
         >
           Blog
         </h1>

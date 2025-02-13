@@ -32,83 +32,36 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-wrap bg-[#DED0C5] pb-6 relative pt-16">
-      <div className="hero-section-1 w-full md:w-[60%] mt-[100px] z-20 px-6 md:px-12">
-        <div className='flex flex-col'>
-      <h1
-  className="font-bigerside-expanded  font-[900] max-[368px]:text-[50px] text-[60px] md:text-[90px] leading-none  text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
->
-Face
-</h1>
-<h1
-  className=" font-[900] max-[368px]:text-[50px] text-[60px] md:text-[90px] leading-none text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
->
-Transformer
-</h1>
-</div>
-        <p className="text-[#796355] text-[16px] font-medium leading-relaxed mb-8">
-        Unveil the essence of beauty, beyond appearances and into the heart of confidence, self-care, and timeless elegance. 
-        Welcome to Beyond Beauty—where your journey to feeling and looking your best begins.
+    <div className="flex flex-col md:flex-row bg-[#DED0C5]  pb-6 relative pt-16">
+      <div className="w-full md:w-1/2 flex flex-col md:text-left px-6 md:p-12">
+        <h1 className="font-bigerside-expanded font-extrabold text-[50px] md:text-[80px] text-white leading-none text-shadow-md">Face</h1>
+        <h1 className="font-extrabold text-[50px] md:text-[80px] text-white leading-none text-shadow-md">Transformer</h1>
+        <p className="text-[#796355] text-lg font-medium leading-relaxed mb-8 mt-4">
+          Unveil the essence of beauty, beyond appearances and into the heart of confidence, self-care, and timeless elegance.
+          Welcome to Beyond Beauty—where your journey to feeling and looking your best begins.
         </p>
-        <div className="img-section flex flex-wrap gap-5 justify-center">
-          <div onClick={() => handleBothImages("/img/Home-page/hero-section-2-strip-img/enhance.png", "/img/Home-page/hero-menu-img/GAL1.png")}>
-            <img
-              onClick={() => handleText("/img/Home-page/hero-section-2-strip-img/enhance.png")}
-              className="hidden"
-              src="/img/Home-page/hero-section-2-strip-img/enhance.png"
-              alt=""
-            />
-            <img
-              onClick={() => handleImageClick("/img/Home-page/hero-menu-img/GAL1.png")}
-              className="w-[199px] hover:opacity-90 cursor-pointer"
-              src="/img/Home-page/hero-menu-img/GAL1.png"
-              alt="Gallery Image 1"
-            />
-          </div>
-
-          <div className='image-1-text' onClick={() => handleBothImages("/img/Home-page/hero-section-2-strip-img/restore.png", "/img/Home-page/hero-menu-img/GAL2.png")}>
-            <img
-              onClick={() => handleText("/img/Home-page/hero-section-2-strip-img/restore.png")}
-              className="hidden"
-              src="/img/Home-page/hero-section-2-strip-img/restore.png"
-              alt=""
-            />
-            <img
-              onClick={() => handleImageClick("/img/Home-page/hero-menu-img/GAL2.png")}
-              className="w-[199px] hover:opacity-90 cursor-pointer"
-              src="/img/Home-page/hero-menu-img/GAL2.png"
-              alt="Gallery Image 2"
-            />
-          </div>
-
-          <div onClick={() => handleBothImages("/img/Home-page/hero-section-2-strip-img/confidence.png", "/img/Home-page/hero-menu-img/GAL3.png")}>
-            <img
-              onClick={() => handleText("/img/Home-page/hero-section-2-strip-img/confidence.png")}
-              className="hidden"
-              src="/img/Home-page/hero-section-2-strip-img/confidence.png"
-              alt=""
-            />
-            <img
-              onClick={() => handleImageClick("/img/Home-page/hero-menu-img/GAL3.png")}
-              className="w-[199px] hover:opacity-90 cursor-pointer"
-              src="/img/Home-page/hero-menu-img/GAL3.png"
-              alt="Gallery Image 3"
-            />
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          {[
+            { text: "/img/Home-page/hero-section-2-strip-img/enhance.png", img: "/img/Home-page/hero-menu-img/GAL1.png" },
+            { text: "/img/Home-page/hero-section-2-strip-img/restore.png", img: "/img/Home-page/hero-menu-img/GAL2.png" },
+            { text: "/img/Home-page/hero-section-2-strip-img/confidence.png", img: "/img/Home-page/hero-menu-img/GAL3.png" }
+          ].map(({ text, img }, index) => (
+            <div key={index} onClick={() => handleBothImages(text, img)} className="cursor-pointer">
+              <img className="w-[140px] h-64 object-cover rounded-lg md:w-[180px] hover:opacity-90" src={img} alt={`Gallery Image ${index + 1}`} />
+            </div>
+          ))}
         </div>
-        <div className="hero-section-2 w-[40%] bg-[url('/img/imgggg 1.png')]">
-          <div className="h-[720px] relative bg-cover">
-            <div className={`z-20 absolute top-0 left-0 object-cover transition-transform duration-500 ${
-              isSliding ? "translate-x-full" : "translate-x-0"
-            }`}>
-              <img className="h-[700px]" src={currentText || "/placeholder.svg"} alt="Text Overlay" />
-            </div>
-            <div className={`absolute top-0 left-0 h-full w-full object-cover transition-transform duration-500 ${
-              isSliding ? "translate-x-full" : "translate-x-0"
-            }`}>
-              <img className="h-full w-full object-cover" src={currentImage || "/placeholder.svg"} alt="Foreground Image" />
-            </div>
-          </div>
+      </div>
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end relative overflow-hidden mt-10 md:mt-0">
+        <div className="relative h-[500px] md:h-[700px] w-[90%] md:w-[80%]">
+          <img
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ${isSliding ? "translate-x-full" : "translate-x-0"}`}
+            src={currentText || "/placeholder.svg"} alt="Text Overlay"
+          />
+          <img
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ${isSliding ? "translate-x-full" : "translate-x-0"}`}
+            src={currentImage || "/placeholder.svg"} alt="Foreground Image"
+          />
         </div>
       </div>
     </div>
@@ -116,4 +69,3 @@ Transformer
 };
 
 export default Home;
-

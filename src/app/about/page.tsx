@@ -54,86 +54,40 @@ Fellow of Academy of General Education (FAGE)
              </p>
           </div>
         </div>
-        <div className="container-section-2 flex justify-center items-center p-8">
-          <img
-            className="w-full max-w-[421px] h-auto max-h-[494px] rounded-[90px]"
-            src="/img/AboutUs/Rectangle 21 (1).png"
-            alt=""
-          />
-        </div>
+        
       </div>
 
       <div className="section-2 mg:px-10 lg:px-14">
-        <div className="qualification mt-20">
-          <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-full text-[#796355] text-center md:text-start text-[28px] md:text-[35px] px-4 md:px-8">
-            Qualification
-          </h1>
-          <div className="qualification-text text-[15px] md:text-[20px] font-semibold flex flex-col px-4 md:px-8 text-[#372E27] gap-6 lg:gap-10">
-            {qualifications.map((item, index) => (
-              <div
-                key={index}
-                className={`qualification-text-${
-                  index + 1
-                } flex md:justify-between md:flex-row gap-4 flex-col lg:items-start items-center`}
-              >
-                <div
-                  className={`${
-                    index % 2 !== 0 ? "text-2 md:order-2" : "text-1 md:order-1"
-                  } md:w-auto w-full flex justify-center mb-4 md:mb-0`}
-                >
-                  <img
-                    src={item.img}
-                    alt={`Qualification ${index + 1}`}
-                    className="w-auto h-auto md:w-[30vw]"
-                  />
-                </div>
-                <div
-                  className={`${
-                    index % 2 !== 0
-                      ? "text-1 md:order-1 md:items-end md:text-end"
-                      : "text-2 md:order-2 md:text-start"
-                  } md:w-[90%] w-full flex flex-col md:items-start items-center  text-center`}
-                >
-                  <p>{item.description}</p>
-                  <p>{item.year}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="contact-section mt-10 flex flex-col">
-          <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-full text-[#796355] text-center md:text-start text-[28px] md:text-[35px] px-4 md:px-8">
-            contact us
-          </h1>
+        <h2 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-full text-[#372E27] text-center md:text-start text-[16px] md:text-[20px]">
+        contact us
+          </h2>
           <div className="contact-us text-[16px] md:text-[24px] font-semibold">
-            <div className="flex gap-3 items-center justify-center md:justify-start text-[#372E27] font-bold px-4 md:px-8 py-3">
+            <div className="flex gap-3 items-center justify-center md:justify-start text-[#372E27] font-bold px-2 py-3">
               <img
                 src="/img/AboutUs/el_phone-alt.png"
                 alt=""
-                className="h-6 w-6 md:h-8 md:w-8"
+                className="h-6 w-6"
               />
               <p>+91 8780687611</p>
             </div>
-            <div className="flex gap-3 items-center justify-center md:justify-start text-[#372E27] font-bold px-4 md:px-8 py-3">
+            <div className="flex gap-3 items-center justify-center md:justify-start text-[#372E27] font-bold px-2 py-3">
               <img
                 src="/img/AboutUs/lets-icons_message-fill.png"
-                className="h-6 w-6 md:h-8 md:w-8"
+                className="h-6 w-6"
                 alt=""
               />
               <p>priyankamaxfax@gmail.com</p>
             </div>
-            <div className="flex gap-3 items-center justify-center md:justify-start w-full text-[#372E27] font-bold px-4 md:px-8 py-3">
+            <div className="flex gap-3 items-center justify-center md:justify-start w-full text-[#372E27] font-bold px-2 py-3">
               <img
                 src="/img/AboutUs/dashicons_admin-site-alt3.png"
-                className="h-6 w-6 md:h-8 md:w-8"
+                className="h-6 w-6"
                 alt=""
               />
-              <p className="break-all">http://www.drpriyankarana.com/</p>
+              <p className="break-all">https://www.drpriyankarana.com/</p>
             </div>
           </div>
         </div>
-      </div>
     </div>
     </>
   );

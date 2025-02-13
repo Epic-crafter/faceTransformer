@@ -44,9 +44,9 @@ const Services = () => {
   };
 
   return (
-    <div className="flex flex-col bg-[#DED0C5]">
-      <div className="section-1 flex md:justify-start justify-center px-4 md:ml-8 mt-16">
-        <h1 className="font-bigerside-expanded  font-[900] md:text-[80px] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10">
+    <div className="flex flex-col mt-10 bg-[#DED0C5]">
+      <div className="section-1 flex md:justify-start justify-center px-6 md:p-12 ">
+        <h1 className="font-bigerside-expanded  font-[900] text-[50px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start mb-10">
           Services
         </h1>
       </div>

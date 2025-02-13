@@ -9,7 +9,7 @@ import ContactUS from "./components/ContactUs"
 
 const pages = () => {
   return (
-    <div>
+    <div className='w-screen bg-[#DED0C5]'>
       <Hero />
       <Gallery />
       <Services />

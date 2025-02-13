@@ -24,9 +24,9 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-[#DED0C5] py-12 px-4">
+    <div className="flex flex-col mt-10 bg-[#DED0C5] px-6 md:p-12">
       <div className="section-1 text-center sm:text-left mb-12">
-        <h1 className="font-bigerside-expanded font-[800] text-[50px] sm:text-[80px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] mb-6">
+        <h1 className="font-bigerside-expanded font-[800] text-[50px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] mb-6">
           GALLERY
         </h1>
         <p className="text-[#796355] text-base text-[16px] font-medium leading-relaxed sm:w-[90%] md:w-[60%] mx-auto sm:mx-0">
