@@ -34,8 +34,8 @@ const Home = () => {
   return (
     <div className="flex flex-col md:flex-row bg-[#DED0C5]  pb-6 relative pt-16">
       <div className="w-full md:w-1/2 flex flex-col md:text-left px-6 md:p-12">
-        <h1 className="font-bigerside-expanded font-extrabold text-[50px] md:text-[80px] text-white leading-none text-shadow-md">Face</h1>
-        <h1 className="font-extrabold text-[50px] md:text-[80px] text-white leading-none text-shadow-md">Transformer</h1>
+        <h1 className="font-bigerside-expanded font-extrabold text-[40px] md:text-[80px] md:w-auto w-full text-white leading-none text-shadow-md">Face</h1>
+        <h1 className="font-extrabold text-[32px] md:text-[80px] text-white md:w-auto w-full leading-none text-shadow-md">Transformer</h1>
         <p className="text-[#796355] text-lg font-medium leading-relaxed mb-8 mt-4">
           Unveil the essence of beauty, beyond appearances and into the heart of confidence, self-care, and timeless elegance.
           Welcome to Beyond Beauty—where your journey to feeling and looking your best begins.
