@@ -1,17 +1,22 @@
 "use client";
-import { useState, useEffect } from "react";
 
-const ReviewPage = () => {
-  const [rating, setRating] = useState(0);
-  const [hoveredStar, setHoveredStar] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
-  const [reviews, setReviews] = useState([]);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    service: "",
-    review: "",
-  });
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const ReviewsList = () => {
+  interface Review {
+    _id: string;
+    rating: number;
+    review: string;
+    name: string;
+    service: string;
+  }
+  
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     fetchReviews();
@@ -27,110 +32,72 @@ const ReviewPage = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-
-  const handleStarClick = (star: number) => {
-    setRating(star);
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const { name, email, service, review } = formData;
-
-    if (!name || !email || !rating || !service || !review) return;
-
-    try {
-      const response = await fetch("/api/reviews", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, rating, service, review }),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        fetchReviews(); // Refresh reviews after submission
-        setTimeout(() => {
-          setSubmitted(false);
-          setFormData({ name: "", email: "", service: "", review: "" });
-          setRating(0);
-        }, 3000);
-      }
-    } catch (error) {
-      console.error("Error submitting review:", error);
-    }
-  };
-
-  const services = [
-    "Facial Treatment",
-    "Skin Restoration",
-    "Cosmetic Enhancement",
-    "Anti-Aging Treatment",
-    "Skincare Consultation",
-    "Other",
-  ];
 
   return (
     <div className="min-h-screen bg-[#DED0C5] py-16">
       <div className="mx-auto px-6 md:px-20">
-        {/* Header */}
         <header className="mb-16">
           <h1 className="text-[52px] md:text-[70px] text-white font-black mb-8">Customer Reviews</h1>
           <div className="h-px w-24 bg-[#796355] mb-8"></div>
-          <p className="text-[rgb(121,99,85)] max-w-2xl">We value your feedback...</p>
+          <p className="text-[rgb(121,99,85)] max-w-2xl">
+            See what our clients have to say about their experiences with our services.
+          </p>
         </header>
 
-        {/* Review Form */}
-        <div className="bg-white/20 p-8 rounded-sm shadow-md max-w-2xl mx-auto">
-          {submitted ? (
-            <div className="text-center py-12">
-              <div className="text-[#796355] text-4xl mb-4">Thank You!</div>
-              <p>Your review has been submitted successfully.</p>
+        <div className="mt-8">
+          <h2 className="text-4xl text-white font-medium mb-6">What Our Clients Say</h2>
+
+          {reviews.length === 0 ? (
+            <div className="bg-white/20 p-8 text-center rounded-sm">
+              <p className="text-[#796355]">No reviews yet. Be the first to share your experience!</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <input name="name" type="text" placeholder="Your Name" required onChange={handleChange} className="w-full p-3" />
-              <input name="email" type="email" placeholder="Email Address" required onChange={handleChange} className="w-full p-3" />
-
-              <div>
-                <label>Your Rating</label>
-                <div className="flex space-x-2">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <button key={star} type="button" onClick={() => handleStarClick(star)} className="text-3xl">
-                      {star <= rating ? "★" : "☆"}
-                    </button>
-                  ))}
+            <Slider {...settings} className="mt-8">
+              {reviews.map((rev) => (
+                <div key={rev._id} className="bg-white/20 p-6 rounded-sm text-center">
+                  <div className="flex justify-center text-[#796355] mb-2">
+                    {"★".repeat(rev.rating)}
+                    {"☆".repeat(5 - rev.rating)}
+                  </div>
+                  <p className="text-[#796355]/90 italic mb-4">{rev.review}</p>
+                  <p className="text-[#796355] font-medium">— {rev.name}</p>
+                  <p className="text-[#796355]/70 text-sm">{rev.service}</p>
                 </div>
-              </div>
-
-              <select name="service" required onChange={handleChange} className="w-full p-3">
-                <option value="">Select a service</option>
-                {services.map((service) => (
-                  <option key={service} value={service}>
-                    {service}
-                  </option>
-                ))}
-              </select>
-
-              <textarea name="review" required rows={6} placeholder="Your Review" onChange={handleChange} className="w-full p-3" />
-
-              <button type="submit" className="w-full bg-[#796355] text-white py-3">Submit Review</button>
-            </form>
+              ))}
+            </Slider>
           )}
-        </div>
 
-
-        <div className="mt-16">
-          <h2 className="text-4xl text-white font-medium mb-6">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            {reviews.map((rev: any) => (
-              <div key={rev._id} className="bg-white/20 p-6">
-                <div className="flex text-[#796355] mb-2">{"★".repeat(rev.rating)}{"☆".repeat(5 - rev.rating)}</div>
-                <p className="text-[#796355]/90 italic mb-4">{rev.review}</p>
-                <p className="text-[#796355] font-medium">— {rev.name}</p>
-              </div>
-            ))}
+          <div className="mt-12 text-center flex justify-center gap-4">
+            <button
+              onClick={fetchReviews}
+              className="bg-[#796355] text-white px-6 py-3 rounded-sm hover:bg-[#8a7264] transition-colors"
+            >
+              Refresh Reviews
+            </button>
+            <button
+              onClick={() => router.push("/reviewform")}
+              className="bg-[#8a7264] text-white px-6 py-3 rounded-sm hover:bg-[#796355] transition-colors"
+            >
+              Add Review
+            </button>
           </div>
         </div>
       </div>
@@ -138,4 +105,4 @@ const ReviewPage = () => {
   );
 };
 
-export default ReviewPage;
+export default ReviewsList;

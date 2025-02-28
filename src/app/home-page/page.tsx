@@ -8,6 +8,7 @@ import Blog from "./components/Blog"
 import ContactUS from "./components/ContactUs"
 import Faq from './components/Faq';
 import Review from './components/Review';
+
 const pages = () => {
   return (
     <div>
