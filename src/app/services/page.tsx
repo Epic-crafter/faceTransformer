@@ -91,13 +91,13 @@ export default function Services() {
                     }}
                   >
                     <div className="bg-[#f2e1d0] rounded-full p-4 mb-4">
-                      <Image
+                      {service.imageURL&&<Image
                         src={service.imageURL}
                         alt={service.title}
                         width={48}
                         height={48}
                         className="w-12 h-12"
-                      />
+                      />}
                     </div>
                     <h2 className="text-base sm:text-lg font-bold text-[#4d2f2f] text-center mb-3 leading-tight">
                       {service.title}

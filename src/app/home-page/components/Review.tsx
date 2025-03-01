@@ -55,15 +55,15 @@ const ReviewsList = () => {
     <div className="min-h-screen bg-[#DED0C5] py-16">
       <div className="mx-auto px-6 md:px-20">
         <header className="mb-16">
-          <h1 className="text-[52px] md:text-[70px] text-white font-black mb-8">Customer Reviews</h1>
-          <div className="h-px w-24 bg-[#796355] mb-8"></div>
+        <h1 className="font-bigerside-expanded  font-[900] text-[50px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start">
+          Customer reviews
+        </h1>      
           <p className="text-[rgb(121,99,85)] max-w-2xl">
             See what our clients have to say about their experiences with our services.
           </p>
         </header>
 
         <div className="mt-8">
-          <h2 className="text-4xl text-white font-medium mb-6">What Our Clients Say</h2>
 
           {reviews.length === 0 ? (
             <div className="bg-white/20 p-8 text-center rounded-sm">

@@ -116,7 +116,6 @@ export default function PostServicePage() {
                       id="imageURL"
                       value={imageURL}
                       onChange={handleURLChange}
-                      required
                       className="pl-10 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 group-hover:shadow-lg"
                       placeholder="Enter image URL"
                     />

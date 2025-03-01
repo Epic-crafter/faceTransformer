@@ -41,12 +41,12 @@ const handleToggle = (index: number): void => {
       <div className="mx-auto px-6 md:px-20">
         {/* Header */}
         <header className="mb-16">
-          <h1 className="font-bigerside-expanded uppercase text-[52px] md:text-[70px] text-white font-black mb-8  font-semibold drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] font-[Helvetica Neue, Arial, sans-serif]">
+          <h1 className="font-bigerside-expanded uppercase text-[52px] md:text-[70px] text-white mb-8  font-semibold drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] font-[Helvetica Neue, Arial, sans-serif]">
             FAQ
           </h1>
           <div className="h-px w-24 bg-[#796355] mb-8"></div>
           <p className="text-[rgb(121 99 85 / var(--tw-text-opacity))] max-w-2xl text-left">
-            Find answers to our most frequently asked questions. If you don't see the information you're looking for, please contact us directly.
+            Find answers to our most frequently asked questions. If you don&apos;t see the information you&apos;re looking for, please contact us directly.
           </p>
         </header>
 

@@ -16,10 +16,10 @@ const pages = () => {
       {/* <Gallery /> */}
       <Services />
       <Blog />
-      <ContactUS />
       <About />
       <Faq />
       <Review />
+      <ContactUS />
     </div>
   )
 }
