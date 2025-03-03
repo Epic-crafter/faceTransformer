@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
@@ -21,8 +22,8 @@ About Us
 
       </div>
       <div className="section-2 md:flex flex-col md:w-[50%] md:relative bg-[#DED0C5] hidden">
-        <img className='absolute md:right-12 md:top-20' src="/img/AboutUs/Rectangle 21.png" alt="" />
-        <img className='absolute md:top-60 md:right-80' src="/img/AboutUs/Rectangle 21.png" alt="" />
+        <Image width={100} height={100} className='absolute md:right-12 md:top-20' src="/img/AboutUs/Rectangle 21.png" alt="" />
+        <Image width={100} height={100} className='absolute md:top-60 md:right-80' src="/img/AboutUs/Rectangle 21.png" alt="" />
       </div>
     </div>
   )

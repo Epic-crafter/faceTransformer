@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { useState } from 'react'
 
 const Home = () => {
@@ -47,18 +48,18 @@ const Home = () => {
             { text: "/img/Home-page/hero-section-2-strip-img/confidence.png", img: "/img/Home-page/hero-menu-img/GAL3.png" }
           ].map(({ text, img }, index) => (
             <div key={index} onClick={() => handleBothImages(text, img)} className="cursor-pointer">
-              <img className="w-[140px] h-64 object-cover rounded-lg md:w-[180px] hover:opacity-90" src={img} alt={`Gallery Image ${index + 1}`} />
+              <Image width={100} height={100} className="w-[140px] h-64 object-cover rounded-lg md:w-[180px] hover:opacity-90" src={img} alt={`Gallery Image ${index + 1}`} />
             </div>
           ))}
         </div>
       </div>
       <div className="w-full md:w-1/2 flex justify-center md:justify-end relative overflow-hidden mt-10 md:mt-0">
         <div className="relative h-[500px] md:h-[700px] w-[90%] md:w-[80%]">
-          <img
+          <Image fill
             className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ${isSliding ? "translate-x-full" : "translate-x-0"}`}
             src={currentText || "/placeholder.svg"} alt="Text Overlay"
           />
-          <img
+          <Image fill
             className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ${isSliding ? "translate-x-full" : "translate-x-0"}`}
             src={currentImage || "/placeholder.svg"} alt="Foreground Image"
           />

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../home-page/components/Navbar";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -63,7 +64,7 @@ Fellow of Academy of General Education (FAGE)
           </h2>
           <div className="contact-us text-[16px] md:text-[24px] font-semibold">
             <div className="flex gap-3 items-center justify-center md:justify-start text-[#372E27] font-bold px-2 py-3">
-              <img
+              <Image width={100} height={100}
                 src="/img/AboutUs/el_phone-alt.png"
                 alt=""
                 className="h-6 w-6"
@@ -71,7 +72,7 @@ Fellow of Academy of General Education (FAGE)
               <p>+91 8780687611</p>
             </div>
             <div className="flex gap-3 items-center justify-center md:justify-start text-[#372E27] font-bold px-2 py-3">
-              <img
+              <Image width={100} height={100}
                 src="/img/AboutUs/lets-icons_message-fill.png"
                 className="h-6 w-6"
                 alt=""
@@ -79,7 +80,7 @@ Fellow of Academy of General Education (FAGE)
               <p>priyankamaxfax@gmail.com</p>
             </div>
             <div className="flex gap-3 items-center justify-center md:justify-start w-full text-[#372E27] font-bold px-2 py-3">
-              <img
+              <Image width={100} height={100}
                 src="/img/AboutUs/dashicons_admin-site-alt3.png"
                 className="h-6 w-6"
                 alt=""

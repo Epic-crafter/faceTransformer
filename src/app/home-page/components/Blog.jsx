@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { formatDate } from '../../../lib/format-date';
+import Image from 'next/image';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -33,7 +34,7 @@ const Blog = () => {
       <div className="section-2 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {blogs.map((blog, index) => (
           <div key={index} className="bg-[#F1EFEE] p-6 rounded-lg shadow-lg">
-            <img
+            <Image width={100} height={100}
               src={blog?.imageUrl || "/img/Blog/Image.png"}
               alt={blog?.title || "Blog Image"}
               className="w-full h-[250px] object-cover rounded-md"
@@ -45,7 +46,7 @@ const Blog = () => {
               {typeof blog?.meta === "string" ? blog?.meta : "Meta description"}
             </p>
             <div className="user-info flex items-center gap-3 p-2">
-              <img src="/img/Blog/Avatar.png" alt={blog?.writer || "Author Avatar"} className="w-10 h-10 rounded-full" />
+              <Image width={100} height={100} src="/img/Blog/Avatar.png" alt={blog?.writer || "Author Avatar"} className="w-10 h-10 rounded-full" />
               <div className="flex flex-col text-[14px] font-medium text-left">
                 <p>{blog?.writer || "Unknown Author"}</p>
                 <span>{formatDate(blog?.upload_time)}</span>

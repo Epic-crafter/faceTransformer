@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 interface Service {
@@ -55,13 +56,13 @@ export default function ServicesPage() {
           <div key={service._id} className="bg-white rounded-lg shadow overflow-hidden">
             <div className="w-full h-64">
               {service.imageURL ? (
-                <img
+                <Image width={100} height={100}
                   src={service.imageURL}
                   alt={service.name}
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <img
+                <Image width={100} height={100}
                   src="/default-image.jpg"
                   alt="default"
                   className="w-full h-full object-cover"

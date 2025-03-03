@@ -1,15 +1,16 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Gallery = () => {
   return (
     <div className='bg-[#DED0C5] flex flex-col h-max-full'>
         <div className="section-1 flex justify-center md:justify-start py-5 px-4 md:px-6 md:py-8">
-            <img src="/img/contact us.png" alt="" />
+            <Image width={100} height={100} src="/img/contact us.png" alt="" />
         </div>
 
         <div className="section-2 bg-[#D6AF96] md:gap-0 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] gap-5 mx-10 my-10 rounded-[10px] border-none flex md:flex-row flex-col justify-between px-12 py-8">
                 <div className="form-section-1 md:w-[644px] w-auto font-medium">
-                    <img src="/img/Fill up this form to get a free consultation.png" alt="" />
+                    <Image width={100} height={100} src="/img/Fill up this form to get a free consultation.png" alt="" />
                     <p>Dont forget to check out our socials!! They will be linked right </p>
                     <p>here for yall to get an idea about us!! </p>
                     <p>Go show us some love!</p>
@@ -17,7 +18,7 @@ const Gallery = () => {
 
                 <div className="form-section-2 bg-[#967860] md:p-8 p-3 gap-[10px] flex flex-col rounded-[10px]">
                     <div className="head-img">
-                        <img src="/img/Fill it up now!!.png" alt="" />
+                        <Image width={100} height={100} src="/img/Fill it up now!!.png" alt="" />
                         </div>
                         <form action="" className='flex flex-col gap-5'>
                         

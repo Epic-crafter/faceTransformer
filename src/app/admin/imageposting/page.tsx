@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Camera } from 'lucide-react'
+import Image from 'next/image'
 
 export default function PostGalleryImagePage() {
   const [imageUrl, setImageUrl] = useState('')
@@ -64,7 +65,7 @@ export default function PostGalleryImagePage() {
               {imageUrl && (
                 <div className="mt-4">
                   <p className="text-sm text-gray-500 mb-2">Image Preview:</p>
-                  <img
+                  <Image fill
                     src={imageUrl}
                     alt="Preview"
                     className="max-w-full max-h-64 border rounded shadow-lg"

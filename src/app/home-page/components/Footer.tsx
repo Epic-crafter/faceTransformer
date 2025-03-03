@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -21,12 +22,21 @@ const Footer = () => {
         <p className="w-[100%] md:w-[250px] text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet neque tortor.
         </p>
-        <div className="icons flex flex-row gap-1">
-          <img src="/img/Footer/Twitter.png" alt="" />
-          <img src="/img/Footer/Ig.png" alt=""  />
-          <img src="/img/Footer/FB.png" alt="" />
-          <img src="/img/Footer/You tube.png" alt="" />
-        </div>
+        <div className="icons flex flex-row gap-1 relative h-6">
+  <div className="relative w-10 h-10">
+    <Image fill src="/img/Footer/Twitter.png" alt="Twitter" className="object-contain" />
+  </div>
+  <div className="relative w-10 h-10">
+    <Image fill src="/img/Footer/Ig.png" alt="Instagram" className="object-contain" />
+  </div>
+  <div className="relative w-10 h-10">
+    <Image fill src="/img/Footer/FB.png" alt="Facebook" className="object-contain" />
+  </div>
+  <div className="relative w-10 h-10">
+    <Image fill src="/img/Footer/You tube.png" alt="YouTube" className="object-contain" />
+  </div>
+</div>
+
       </div>
 
       <div className="section-2 flex flex-col items-start text-white font-semibold md:w-[20%] md:mb-0 mb-6 gap-2 md:gap-0">
@@ -41,20 +51,29 @@ const Footer = () => {
 
       <div className="section-3 text-white font-semibold md:w-[25%] md:mb-0 mb-6 gap-2 md:gap-0">
       <h1 className="font-bigerside-expanded font-[700] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[20px]">Contact Us</h1>
-        <div className="info-container flex flex-col gap-4 mt-4 text-[16px] font-medium">
-          <div className="info-1 flex items-center">
-            <img src="/img/Footer/Vector.png" alt="Icon" className="w-4 h-4" />
-            <p className="ml-2 text-md">hello@website.com</p>
-          </div>
-          <div className="info-2 flex items-start">
-            <img src="/img/Footer/Group 62.png" className="w-5 h-5" alt="" />
-            <p className="ml-2 text-md">Riverside Building, County Hall, London SE1 7PB, United Kingdom</p>
-          </div>
-          <div className="info-3 flex items-center">
-            <img src="/img/Footer/Group 63.png" className="w-5 h-5" alt="" />
-            <p className="ml-2 text-md">451-484-5939</p>
-          </div>
-        </div>
+      <div className="info-container flex flex-col gap-4 mt-4 text-[16px] font-medium">
+  <div className="info-1 flex items-center">
+    <div className="relative w-5 h-5">
+      <Image fill className="object-contain" src="/img/Footer/Vector.png" alt="Icon" />
+    </div>
+    <p className="ml-2 text-md">hello@website.com</p>
+  </div>
+
+  <div className="info-2 flex items-start">
+    <div className="relative w-5 h-5">
+      <Image fill className="object-contain" src="/img/Footer/Group 62.png" alt="" />
+    </div>
+    <p className="ml-2 text-md">Riverside Building, County Hall, London SE1 7PB, United Kingdom</p>
+  </div>
+
+  <div className="info-3 flex items-center">
+    <div className="relative w-5 h-5">
+      <Image fill className="object-contain" src="/img/Footer/Group 63.png" alt="" />
+    </div>
+    <p className="ml-2 text-md">451-484-5939</p>
+  </div>
+</div>
+
       </div>
 
       <div className="section-4 text-white font-semibold md:w-[25%] sm:mt-4">

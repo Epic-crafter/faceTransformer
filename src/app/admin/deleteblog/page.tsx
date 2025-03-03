@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 interface Blog {
   _id: string
@@ -54,7 +55,7 @@ export default function BlogsPage() {
           <div key={blog._id} className="border p-4 rounded-lg">
             <h2 className="text-xl font-semibold">{blog.title}</h2>
             <p className="text-gray-600">By {blog.writer}</p>
-            <img src={blog.imageUrl} alt={blog.title} className="mt-2 w-full h-40 object-cover rounded" />
+            <Image width={100} height={100} src={blog.imageUrl} alt={blog.title} className="mt-2 w-full h-40 object-cover rounded" />
             <div className="mt-4 flex justify-between items-center">
               <a href={blog.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                 Read Blog

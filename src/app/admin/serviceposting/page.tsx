@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Link, FileText, Type } from 'lucide-react'
+import Image from 'next/image'
 // import Layout from '../layout' // Adjust the import path to your Layout component
 
 export default function PostServicePage() {
@@ -125,7 +126,7 @@ export default function PostServicePage() {
 
                 <div className="mt-4">
                   {imageURL ? (
-                    <img src={imageURL} alt="Image Preview" className="w-full h-56 object-cover rounded-md" />
+                    <Image width={100} height={100} src={imageURL} alt="Image Preview" className="w-full h-56 object-cover rounded-md" />
                   ) : (
                     <p className="text-center text-gray-500">No image URL provided</p>
                   )}

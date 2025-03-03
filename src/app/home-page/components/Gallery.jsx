@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const Gallery = () => {
@@ -40,7 +41,7 @@ const Gallery = () => {
             key={image._id || index}
             className="flex flex-col items-center bg-white shadow-lg rounded-lg overflow-hidden"
           >
-            <img
+            <Image fill
               src={image.imageUrl}
               className="w-full h-[200px] object-cover"
               alt={image.title || 'Gallery Image'}

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Trash2 } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import Image from 'next/image';
 
 const GalleryPage = () => {
   const [images, setImages] = useState<{ _id: string; imageUrl: string; title: string }[]>([]);
@@ -70,7 +71,7 @@ const handleDelete = async (id: string): Promise<void> => {
         {images.map((image) => (
           <Card key={image._id} className="overflow-hidden">
             <CardContent className="p-0">
-              <img
+              <Image width={100} height={100}
                 src={image.imageUrl}
                 alt={image.title}
                 className="w-full h-48 object-cover"

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 type Service = {
@@ -58,7 +59,7 @@ const Services = () => {
               key={index}
               className="box-1 flex flex-col justify-center items-center rounded-[20px] py-4 px-3 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] md:w-[30%] w-auto"
             >
-              <img src={service.imageURL} alt={service.title} />
+              <Image fill src={service.imageURL} alt={service.title} />
               <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-center text-[20px] sm:text-[24px] md:text-[28px]">
                 {service.title}
               </h1>
