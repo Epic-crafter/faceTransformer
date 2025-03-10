@@ -1,5 +1,5 @@
 "use client"
-import { Facebook } from '@mui/icons-material';
+import { Facebook, Instagram, Twitter, YouTube } from '@mui/icons-material';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -22,10 +22,10 @@ const Footer = () => {
         <p className="w-[100%] md:w-[300px] text-sm">
         Unveil the essence of beauty, beyond appearances and into the heart of confidence.</p>
         <div className="icons flex flex-row mt-2 gap-1">
-          <img src="/img/Footer/Twitter.png" alt="" />
-          <img src="/img/Footer/Ig.png" alt=""  />
+          <Twitter/>
+          <Instagram/>
           <Facebook />
-          <img src="/img/Footer/You tube.png" alt="" />
+          <YouTube/>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="info-container flex flex-col gap-4 mt-4 text-[16px] font-medium">
           <div className="info-1 flex items-center">
             <img src="/img/Footer/Vector.png" alt="Icon" className="w-4 h-4" />
-            <p className="ml-2 text-md">hello@website.com</p>
+            <p className="ml-2 text-md">info@facetransformer.in</p>
           </div>
           <div className="info-2 flex items-start">
             <img src="/img/Footer/Group 62.png" className="w-5 h-5" alt="" />
@@ -52,7 +52,8 @@ const Footer = () => {
           </div>
           <div className="info-3 flex items-center">
             <img src="/img/Footer/Group 63.png" className="w-5 h-5" alt="" />
-            <p className="ml-2 text-md">451-484-5939</p>
+            <p className="ml-2 text-md">+918780687611
+            </p>
           </div>
         </div>
       </div>
