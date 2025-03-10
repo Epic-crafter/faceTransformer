@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 interface Service {
   _id: string;
-  name: string;
+  title: string;
   imageURL: string;
   description: string;
 }
@@ -57,7 +57,7 @@ export default function ServicesPage() {
               {service.imageURL ? (
                 <img
                   src={service.imageURL}
-                  alt={service.name}
+                  alt={service.title}
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -69,7 +69,7 @@ export default function ServicesPage() {
               )}
             </div>
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-3">{service.name}</h2>
+              <h2 className="text-xl font-semibold mb-3">{service?.title}</h2>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <button
                 onClick={() => deleteService(service._id)}

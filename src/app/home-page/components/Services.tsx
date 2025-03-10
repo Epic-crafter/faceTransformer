@@ -1,9 +1,10 @@
 'use client'
-
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 type Service = {
   imageURL: string;
+  blogLink: string;
   title: string;
   description: string;
 };
@@ -21,7 +22,7 @@ const Services = () => {
           throw new Error('Failed to fetch services');
         }
         const data = await response.json();
-        setServices(data.services);
+        setServices(data.services.slice(-3));
       } catch (error) {
         if (error instanceof Error) {
           setError(error.message);
@@ -42,7 +43,11 @@ const Services = () => {
   const toggleDescription = (index: number) => {
     setExpandedService(expandedService === index ? null : index);
   };
-
+  const router= useRouter()
+  const navigate = (url: string) => {
+    const path = new URL(url).pathname;
+    router.push(path);
+  };
   return (
     <div className="flex flex-col mt-10 bg-[#DED0C5]">
       <div className="section-1 flex md:justify-start justify-center px-6 md:p-12 ">
@@ -56,9 +61,9 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="box-1 flex flex-col justify-center items-center rounded-[20px] py-4 px-3 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] md:w-[30%] w-auto"
+              className="box-1 flex flex-col justify- items-center rounded-[20px] py-4 px-3 bg-gradient-to-b shadow-xl from-[#9C8271] to-[#D6AF96] md:w-[30%] w-auto"
             >
-              <img src={service.imageURL} alt={service.title} />
+              <img className='h-20 rounded-full' src={service.imageURL||"/logo.webp"} alt={service.title} />
               <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-center text-[20px] sm:text-[24px] md:text-[28px]">
                 {service.title}
               </h1>
@@ -75,7 +80,7 @@ const Services = () => {
                   {expandedService === index ? 'Read Less' : 'Read More'}
                 </button>
               )}
-              <button className="px-6 py-3 bg-transparent border-black border-2 rounded-[50px] font-semibold mt-2 text-black text-[16px]">
+              <button disabled={!service?.blogLink} onClick={()=>navigate(service?.blogLink)} className="px-6 py-3 bg-transparent disabled:cursor-not-allowed border-black border-2 rounded-[50px] font-semibold mt-2 text-black text-[16px]">
                 Know More
               </button>
             </div>

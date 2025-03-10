@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const ReviewsList = () => {
   interface Review {
@@ -64,7 +65,7 @@ const ReviewsList = () => {
           </p>
         </header>
 
-        <div className="mt-8">
+        <div className="mt-8 mx-auto md:w-[60%]">
 
           {reviews.length === 0 ? (
             <div className="bg-white/20 p-8 text-center rounded-sm">
@@ -73,8 +74,14 @@ const ReviewsList = () => {
           ) : (
             <Slider {...settings} className="mt-8">
               {reviews.map((rev) => (
-                <div key={rev._id} className="bg-white/20 p-6 rounded-sm text-center">
-                  <div className="flex justify-center text-[#796355] mb-2">
+                <div key={rev._id} className="relative bg-white/20 p-4 rounded-sm flex flex-col items-center">
+                <img
+                  alt="avatar"
+                  className="h-32 w-32 mx-auto rounded-full"
+                  src={`https://api.dicebear.com/9.x/fun-emoji/svg?seed=${rev?.name || "random"}`}
+                />
+                <div className=" text-center flex mt-5 flex-col items-center">
+                  <div className="flex text-4xl justify-center text-[#796355] mb-2">
                     {"★".repeat(rev.rating)}
                     {"☆".repeat(5 - rev.rating)}
                   </div>
@@ -82,6 +89,8 @@ const ReviewsList = () => {
                   <p className="text-[#796355] font-medium">— {rev.name}</p>
                   <p className="text-[#796355]/70 text-sm">{rev.service}</p>
                 </div>
+              </div>
+              
               ))}
             </Slider>
           )}

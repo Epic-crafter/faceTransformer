@@ -3,7 +3,7 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <div className="flex flex-col w-full mt-20  p-2 lg:py-10 lg:px-16 gap-10">
+    <div className="flex flex-col items-center w-full mt-20  p-2 lg:py-10 lg:px-16 gap-10">
     <Skeleton className="h-[30vw] lg:w-[75%] w-full rounded-xl" />
     <div className="space-y-2 lg:mt-12 mt-6">
       <Skeleton className="h-8 w-full" />

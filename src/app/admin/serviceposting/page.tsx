@@ -6,7 +6,8 @@ import { Link, FileText, Type } from 'lucide-react'
 // import Layout from '../layout' // Adjust the import path to your Layout component
 
 export default function PostServicePage() {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState('') 
+  const [blogLink, setBlogLink] = useState('') 
   const [description, setDescription] = useState('')
   const [imageURL, setImageURL] = useState<string>('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -22,6 +23,7 @@ export default function PostServicePage() {
     const formData = {
       title,
       description,
+      blogLink,
       imageURL,
     }
 
@@ -42,7 +44,6 @@ export default function PostServicePage() {
       console.log(result)
       setIsSuccess(true)
       
-      // Redirect after 5 seconds
       setTimeout(() => {
         router.push('/services')
       }, 5000)
@@ -60,7 +61,7 @@ export default function PostServicePage() {
 
   return (
     // <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-[#e6c7b3] to-[#f5e5d3] flex justify-center items-center p-4 relative">
+      <div className="min-h-screen  flex justify-center items-center p-4 relative">
         <div className="absolute top-16 left-8 w-40 h-40 bg-blue-300 opacity-20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-16 right-16 w-56 h-56 bg-blue-500 opacity-10 rounded-full blur-3xl"></div>
 
@@ -85,6 +86,22 @@ export default function PostServicePage() {
                       required
                       className="pl-10 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 group-hover:shadow-lg"
                       placeholder="Enter service title"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
+                    Blog link
+                  </label>
+                  <div className="relative group">
+                    <Type className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 group-hover:text-blue-600 transition duration-150" size={18} />
+                    <input
+                      type="text"
+                      id="bloglink"
+                      value={blogLink}
+                      onChange={(e) => setBlogLink(e.target.value)}
+                      className="pl-10 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition duration-200 group-hover:shadow-lg"
+                      placeholder="Enter related blog link"
                     />
                   </div>
                 </div>

@@ -11,7 +11,7 @@ const client = new MongoClient(uri);
 
 export async function POST(request: Request) {
   try {
-    const { title, description, imageURL } = await request.json();
+    const { title, description, imageURL,blogLink } = await request.json();
 
     await client.connect();
     const database = client.db('serviceDB');
@@ -20,6 +20,7 @@ export async function POST(request: Request) {
     const result = await collection.insertOne({
       title,
       description,
+      blogLink,
       imageURL,
       createdAt: new Date(),
     });

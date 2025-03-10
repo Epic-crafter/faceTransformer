@@ -1,4 +1,5 @@
 "use client"
+import { Facebook } from '@mui/icons-material';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -18,13 +19,12 @@ const Footer = () => {
       <div className="section-1 face-transform flex flex-col md:mb-0 mb-6 gap-3 md:gap-0 text-white font-medium md:w-[25%]">
         <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Face</h1>
     <h1 className="font-bigerside-expanded  font-[900] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] w-[90%] text-white text-start text-[20px] sm:text-[24px] md:text-[28px]">Transform</h1>
-        <p className="w-[100%] md:w-[250px] text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet neque tortor.
-        </p>
-        <div className="icons flex flex-row gap-1">
+        <p className="w-[100%] md:w-[300px] text-sm">
+        Unveil the essence of beauty, beyond appearances and into the heart of confidence.</p>
+        <div className="icons flex flex-row mt-2 gap-1">
           <img src="/img/Footer/Twitter.png" alt="" />
           <img src="/img/Footer/Ig.png" alt=""  />
-          <img src="/img/Footer/FB.png" alt="" />
+          <Facebook />
           <img src="/img/Footer/You tube.png" alt="" />
         </div>
       </div>

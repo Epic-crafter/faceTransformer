@@ -4,11 +4,13 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card } from "@/components/ui/card"
 import Navbar from '../home-page/components/Navbar';
+import { useRouter } from 'next/navigation';
 
 interface Service {
   title: string;
   description: string;
   imageURL: string;
+  blogLink: string;
 }
 
 export default function Services() {
@@ -56,6 +58,12 @@ export default function Services() {
       </div>
     )
   }
+  const router= useRouter()
+
+  const navigate = (url: string) => {
+    const path = new URL(url).pathname;
+    router.push(path);
+  };
 
   return (
     <div>
@@ -102,9 +110,9 @@ export default function Services() {
                     <h2 className="text-base sm:text-lg font-bold text-[#4d2f2f] text-center mb-3 leading-tight">
                       {service.title}
                     </h2>
-                    <button className="mt-2 px-4 py-1 border border-[#4d2f2f] text-sm font-medium text-[#4d2f2f] rounded-full hover:bg-[#4d2f2f] hover:text-white transition-all">
-                      Know More
-                    </button>
+                    <button disabled={!service?.blogLink} onClick={()=>navigate(service?.blogLink)} className="px-6 py-3 bg-transparent disabled:cursor-not-allowed border-black border-2 rounded-[50px] font-semibold mt-2 text-black text-[16px]">
+                Know More
+              </button>
                   </div>
 
                   <div className="flex-1 p-4 sm:p-6 flex items-center">

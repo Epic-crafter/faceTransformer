@@ -16,7 +16,7 @@ export async function generateMetadata({ params }:any) {
     const res = await fetch(
       `${process.env.BASE_URL}/api/metadata/blog/${params?.url}`
     );
-    const data = await res.json();
+    const data = await res.json();    
     blog = data.blog.meta;
   } catch (error) {
     console.log(error);
