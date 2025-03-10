@@ -21,12 +21,12 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <div className="bg-[#DED0C5] flex flex-col md:flex-row fixed w-full justify-between items-center h-16 z-40">
-      <div className="logo flex gap-2 items-center absolute left-6 md:static md:p-4">
+    <div className="bg-[#DED0C5] flex  md:flex-row fixed w-full justify-between items-center h-16 z-40">
+      <div className="logo flex gap-2 items-center absolute left-3 md:left-5 md:static md:p-4">
         <a href="/">
           <Image width={100} className="rounded-full h-12 w-12 object-cover" height={100} alt="FT" src={"/logo.webp"}></Image>
         </a>
-        <p className="text-lg text-white">Face Transformer</p>
+        <p className="text-lg text-white font-semibold">Face Transformer</p>
       </div>
 
       <div
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
           onClick={toggleNavbar}
           aria-expanded={isClick}
           aria-label="Toggle navigation menu"
-          className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none"
+          className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none"
         >
           {isClick ? (
             <svg
