@@ -2,7 +2,7 @@
 import { useState } from "react"
 import type React from "react"
 
-const ReviewForm = () => {
+const Page = () => {
   const [rating, setRating] = useState(0)
   const [hoveredStar, setHoveredStar] = useState(0)
   const [submitted, setSubmitted] = useState(false)
@@ -147,5 +147,5 @@ const ReviewForm = () => {
   )
 }
 
-export default ReviewForm
+export default Page
 

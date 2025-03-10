@@ -13,7 +13,8 @@ interface Service {
   blogLink: string;
 }
 
-export default function Services() {
+export default function Page() {
+  const router= useRouter()
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [services, setServices] = useState<Service[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -58,7 +59,7 @@ export default function Services() {
       </div>
     )
   }
-  const router= useRouter()
+ 
 
   const navigate = (url: string) => {
     const path = new URL(url).pathname;
