@@ -55,8 +55,9 @@ const ReviewsList = () => {
     <div className="min-h-screen bg-[#DED0C5] py-16">
       <div className="mx-auto px-6 md:px-20">
         <header className="mb-16">
-        <h1 className="font-bigerside-expanded  font-[900] text-[50px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start">
-          Customer reviews
+        <h1
+  className="font-bigerside-expanded  font-[900] text-[40px] sm:text-[60px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] text-start"
+>  Customer reviews
         </h1>      
           <p className="text-[rgb(121,99,85)] max-w-2xl">
             See what our clients have to say about their experiences with our services.

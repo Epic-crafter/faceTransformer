@@ -11,6 +11,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif; /* Body text styling */
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 h1,

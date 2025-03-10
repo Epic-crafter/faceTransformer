@@ -42,7 +42,7 @@ export default function Services() {
   }, [])
 
   if (isLoading) {
-    return <div className="min-h-screen bg-[rgb(222,208,197)] flex items-center justify-center">Loading...</div>
+    return <div className="min-h-screen bg-[rgb(222,208,197)] flex items-center justify-center"><Image width={100} className="rounded-full h-16 w-16 animate-ping object-cover" height={100} alt="FT" src={"/logo.webp"}></Image></div>
   }
 
   if (error) {
@@ -62,7 +62,7 @@ export default function Services() {
               <Navbar />
 
       <div className="min-h-screen bg-[rgb(222,208,197)] p-4 sm:p-8 pb-2">
-        <div className="max-w-7xl mx-auto mt-8 sm:mt-[39px]">
+        <div className="max-w-7xl mx-auto mt-12 sm:mt-[39px]">
           <h1 className="mb-8 sm:mb-12 w-full max-w-md mx-auto text-center text-white text-[clamp(2rem,5vw,4rem)] font-[651]  leading-[1.2] tracking-[0%] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] font-bigerside">
             Services
           </h1>
@@ -76,7 +76,7 @@ export default function Services() {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <Card
-                  className={`flex flex-col sm:flex-row max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-[#8d6e63] ${
+                  className={`flex flex-col sm:flex-row max-w-3xl rounded-2xl overflow-hidden shadow-lg bg-[#8d6e63] ${
                     index % 2 === 1 ? "sm:flex-row-reverse" : "sm:flex-row"
                   }`}
                 >

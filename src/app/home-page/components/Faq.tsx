@@ -15,8 +15,8 @@ const handleToggle = (index: number): void => {
 
   const faqItems = [
     {
-      question: "What services does Beyond Beauty offer?",
-      answer: "Beyond Beauty offers comprehensive beauty treatments including facials, skin restoration, cosmetic enhancements, anti-aging treatments, and personalized skincare consultations."
+      question: "What services does Face Transformer offer?",
+      answer: "Face Transformer offers comprehensive beauty treatments including facials, skin restoration, cosmetic enhancements, anti-aging treatments, and personalized skincare consultations."
     },
     {
       question: "How do I schedule an appointment?",
@@ -41,7 +41,7 @@ const handleToggle = (index: number): void => {
       <div className="mx-auto px-6 md:px-20">
         {/* Header */}
         <header className="mb-16">
-          <h1 className="font-bigerside-expanded uppercase text-[52px] md:text-[70px] text-white mb-8  font-semibold drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] font-[Helvetica Neue, Arial, sans-serif]">
+          <h1 className="font-bigerside-expanded uppercase text-[40px] md:text-[60px] text-white mb-8  font-semibold drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] font-[Helvetica Neue, Arial, sans-serif]">
             FAQ
           </h1>
           <div className="h-px w-24 bg-[#796355] mb-8"></div>

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -21,12 +22,11 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="bg-[#DED0C5] flex flex-col md:flex-row fixed w-full justify-between items-center h-16 z-40">
-      <div className="logo absolute left-6 md:static md:p-4">
+      <div className="logo flex gap-2 items-center absolute left-6 md:static md:p-4">
         <a href="/">
-          <h1 className="font-bigerside-expanded  font-[900] text-[50px] text-white [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
-            Logo
-          </h1>
+          <Image width={100} className="rounded-full h-12 w-12 object-cover" height={100} alt="FT" src={"/logo.webp"}></Image>
         </a>
+        <p className="text-lg text-white">Face Transformer</p>
       </div>
 
       <div
@@ -57,6 +57,12 @@ const Navbar: React.FC = () => {
           className="py-2 px-4 md:p-0 text-center md:text-left hover:underline"
         >
           BLOG
+        </a>
+        <a
+          href="/faqs"
+          className="py-2 px-4 md:p-0 text-center md:text-left hover:underline"
+        >
+          FAQS
         </a>
         <a
           href="/contact"

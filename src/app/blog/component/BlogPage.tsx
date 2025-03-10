@@ -18,9 +18,10 @@ const BlogPage = () => {
 
   const GetBlogs = async () => {
     try {
+      setLoading(true)
       const response = await fetch("api/blog/get");
       const data = await response.json();
-      setLoading(false);
+     setLoading(false);
       if(data.length>0){
       setBlogs(data);
       setSortedBlogs(data);

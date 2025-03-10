@@ -38,7 +38,7 @@ const Home = () => {
         <h1 className="font-extrabold text-[32px] md:text-[80px] text-white md:w-auto w-full leading-none text-shadow-md">Transformer</h1>
         <p className="text-[#796355] text-lg font-medium leading-relaxed mb-8 mt-4">
           Unveil the essence of beauty, beyond appearances and into the heart of confidence, self-care, and timeless elegance.
-          Welcome to Beyond Beauty—where your journey to feeling and looking your best begins.
+          Welcome to Face Transformer—where your journey to feeling and looking your best begins.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {[

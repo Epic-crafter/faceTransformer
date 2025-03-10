@@ -2,63 +2,14 @@
 
 import * as React from "react";
 import { AnimatedTestimonials } from "../../components/galary-carausel";
-import Image from "next/image";
 
-interface GalleryItem {
-  id: string;
-  name: string;
-  image: string;
-  description: string;
-}
 
-interface ApiGalleryItem {
-  _id: string;
-  title: string;
-  imageUrl: string;
-}
 
-export default function GalleryCarousel() {
-  const [galleryItems, setGalleryItems] = React.useState<GalleryItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    async function fetchGalleryItems() {
-      try {
-        const response = await fetch("/api/gallery");
-        if (!response.ok) {
-          throw new Error("Failed to fetch gallery items");
-        }
-        const data: ApiGalleryItem[] = await response.json();
-        
-        const mappedItems: GalleryItem[] = data.map((item) => ({
-          id: item._id,
-          name: item.title,
-          image: item.imageUrl,
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        }));
-
-        setGalleryItems(mappedItems);
-      } catch (error) {
-        console.error("Error fetching gallery items:", error);
-        // Set some default items in case of error
-        setGalleryItems([
-          {
-            id: "1",
-            name: "Default Item",
-            image: "/placeholder.svg?height=500&width=500&text=Default",
-            description: "Default description for placeholder item.",
-          },
-        ]);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    fetchGalleryItems();
-  }, []);
+export default function GalleryCarousel({galleryItems}:any) {
+ 
 
   const testimonials = React.useMemo(() => 
-    galleryItems.map((item) => ({
+    galleryItems?.map((item:any) => ({
       quote: item.description,
       name: item.name,
       designation: "Gallery Item",
@@ -79,10 +30,9 @@ export default function GalleryCarousel() {
           embracing true beauty. Chic, astound, get inspired, and undertake
           your beauty journey.
         </p>
-        {isLoading ? (
-          <div className="flex justify-center items-center h-64">
-            <div className="text-[#766B63] text-lg">Loading gallery items...</div>
-          </div>
+        {!testimonials ? (
+          <>
+          </>
         ) : (
           <div className="relative w-full h-full overflow-hidden rounded-lg">
             <AnimatedTestimonials 

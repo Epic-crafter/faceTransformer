@@ -11,7 +11,7 @@ import Review from './components/Review';
 
 const pages = () => {
   return (
-    <div className='w-screen bg-[#DED0C5]'>
+    <div className='w-screen overflow-x-hidden bg-[#DED0C5]'>
       <Hero />
       {/* <Gallery /> */}
       <Services />

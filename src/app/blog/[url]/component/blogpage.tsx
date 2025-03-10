@@ -19,8 +19,8 @@ const Blogpage = async ({ params }:any) => {
   }
 
   return (
-    <>
-            <Navbar />
+    <div >
+            <div className="absolute top-0"><Navbar /></div>
 
       <div className="relative university-ab blogpage flex flex-col w-full mt-20  p-2 lg:py-10 lg:px-16 gap-10">
         <div className="w-full flex justify-center gap-4">
@@ -48,7 +48,7 @@ const Blogpage = async ({ params }:any) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
